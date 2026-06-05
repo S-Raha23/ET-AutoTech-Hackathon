@@ -1,0 +1,5 @@
+timestamp,plant,line,machine_id,part_id,batch_id,shift,operator_id,temperature,pressure,torque,welding_current,cycle_time,energy_kwh,defect
+2026-06-01 08:00,Pune Plant,Line 3,M007,P002,BX112,Day,O102,72,4.2,22,184,54,12.4,0
+2026-06-01 20:00,Pune Plant,Line 3,M007,P002,BX112,Night,O221,76,4.7,25,191,61,14.8,1
+2026-06-02 08:00,Pune Plant,Line 3,M007,P002,BX112,Day,O103,73,4.3,23,185,55,12.9,0
+2026-06-02 20:00,Pune Plant,Line 3,M007,P002,BX112,Night,O222,77,4.8,26,192,63,15.1,1

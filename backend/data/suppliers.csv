@@ -1,0 +1,6 @@
+supplier_id,supplier_name,country,region,rating,on_time_delivery_rate,avg_delay_days,defect_rate,lead_time_days,capacity_utilization,payment_terms,risk_score
+S001,ElectroChip Asia,China,East Asia,3.8,0.72,8.5,0.038,42,0.91,Net 60,87
+S002,Bharat Semi Components,India,South Asia,4.5,0.91,2.1,0.014,21,0.73,Net 45,38
+S003,Korea MicroSystems,South Korea,East Asia,4.2,0.87,3.4,0.018,26,0.78,Net 45,44
+S004,MetalForm India,India,South Asia,4.1,0.84,3.9,0.026,18,0.81,Net 30,52
+S005,ConnectAuto Vietnam,Vietnam,SEA,4.0,0.86,4.2,0.021,28,0.76,Net 45,49

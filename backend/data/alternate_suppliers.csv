@@ -1,0 +1,4 @@
+part_id,supplier_id,supplier_name,country,qualification_status,cost_per_unit,lead_time_days,capacity_available,quality_score,delivery_score
+P001,S002,Bharat Semi Components,India,Approved,2140,21,0.35,0.92,0.91
+P001,S003,Korea MicroSystems,South Korea,Conditional,2195,26,0.20,0.89,0.87
+P002,S004,MetalForm India,India,Approved,4800,18,0.40,0.86,0.84

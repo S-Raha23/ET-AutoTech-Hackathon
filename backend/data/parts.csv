@@ -1,0 +1,4 @@
+part_id,part_name,category,material,criticality,current_supplier_id,vehicle_model,plant,line,daily_consumption,current_inventory,safety_stock
+P001,Infotainment MCU,Semiconductor,Silicon,High,S001,EV SUV X,Pune Plant,Line 2,420,4500,5000
+P002,Battery Tray,EV Component,Aluminium,High,S004,EV SUV X,Pune Plant,Line 3,180,2900,2500
+P003,Wiring Harness Connector,Electrical,Copper Plastic,Medium,S005,Hatchback Z,Chennai Plant,Line 1,650,12000,8000

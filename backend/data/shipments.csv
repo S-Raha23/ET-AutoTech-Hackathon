@@ -1,0 +1,4 @@
+shipment_id,supplier_id,part_id,origin_country,port,route,planned_arrival,actual_arrival,delay_days,status
+SH001,S001,P001,China,Shanghai,Shanghai-Chennai-Pune,2026-06-10,2026-06-18,8,Delayed
+SH002,S002,P001,India,Chennai,Chennai-Pune,2026-06-08,2026-06-08,0,On Time
+SH003,S004,P002,India,Mumbai,Mumbai-Pune,2026-06-09,2026-06-11,2,Delayed

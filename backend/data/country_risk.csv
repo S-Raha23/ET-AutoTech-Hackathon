@@ -1,0 +1,5 @@
+country,geopolitical_risk,trade_restriction_risk,currency_risk,logistics_risk,overall_country_risk
+China,0.72,0.68,0.42,0.61,0.66
+India,0.22,0.18,0.24,0.31,0.24
+South Korea,0.38,0.31,0.28,0.34,0.33
+Vietnam,0.41,0.29,0.36,0.39,0.36

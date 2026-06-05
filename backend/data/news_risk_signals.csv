@@ -1,0 +1,3 @@
+date,title,category,country,commodity,risk_level,risk_score
+2026-06-02,Memory chip shortage warning affects automotive electronics,Semiconductor,Global,Semiconductor Memory,High,0.78
+2026-06-03,Port congestion increases shipment delay risk,Logistics,China,NA,Medium,0.55

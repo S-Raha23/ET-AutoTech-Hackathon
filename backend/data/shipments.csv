@@ -1,4 +1,301 @@
-shipment_id,supplier_id,part_id,origin_country,port,route,planned_arrival,actual_arrival,delay_days,status
-SH001,S001,P001,China,Shanghai,Shanghai-Chennai-Pune,2026-06-10,2026-06-18,8,Delayed
-SH002,S002,P001,India,Chennai,Chennai-Pune,2026-06-08,2026-06-08,0,On Time
-SH003,S004,P002,India,Mumbai,Mumbai-Pune,2026-06-09,2026-06-11,2,Delayed
+shipment_id,supplier_id,part_id,origin_country,port,route,planned_arrival,actual_arrival,delay_days,quantity,status
+SH001,S020,P053,Singapore,Singapore,Singapore-Chennai,2025-10-01,2025-10-08,7,4584,Delivered
+SH002,S036,P033,Netherlands,Rotterdam,Rotterdam-Mumbai,2025-10-04,2025-10-05,1,4581,Delivered
+SH003,S021,P024,China,Shanghai,Shanghai-Chennai,2025-10-08,2025-10-08,0,4097,Delivered
+SH004,S020,P015,Singapore,Singapore,Singapore-Chennai,2025-10-07,2025-10-07,0,2207,Delivered
+SH005,S006,P046,Taiwan,Kaohsiung,Kaohsiung-Chennai,2025-10-09,2025-10-13,4,2992,Delivered
+SH006,S004,P042,India,Mumbai,Mumbai-Pune,2025-10-12,2025-10-13,1,1934,Delivered
+SH007,S022,P020,China,Shanghai,Shanghai-Chennai,2025-10-13,2025-10-13,0,2583,Delivered
+SH008,S021,P035,China,Shanghai,Shanghai-Chennai,2025-10-16,2025-10-25,9,696,Delivered
+SH009,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2025-10-18,2025-10-18,0,3684,Delivered
+SH010,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2025-10-19,2025-10-26,7,3422,Delivered
+SH011,S021,P035,China,Shanghai,Shanghai-Chennai,2025-10-23,2025-10-23,0,1441,Delivered
+SH012,S013,P028,Poland,Gdansk,Gdansk-Chennai,2025-10-23,2025-10-23,0,1823,Delivered
+SH013,S056,P058,China,Shanghai,Shanghai-Chennai,2025-10-26,2025-10-31,5,2848,Delivered
+SH014,S056,P058,China,Shanghai,Shanghai-Chennai,2025-10-27,2025-11-07,11,4428,Delivered
+SH015,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2025-10-29,2025-10-29,0,4184,Delivered
+SH016,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2025-10-31,2025-10-31,0,1527,Delivered
+SH017,S021,P035,China,Shanghai,Shanghai-Chennai,2025-11-05,2025-11-10,5,1741,Delivered
+SH018,S013,P028,Poland,Gdansk,Gdansk-Chennai,2025-11-06,2025-11-13,7,3649,Delivered
+SH019,S006,P046,Taiwan,Kaohsiung,Kaohsiung-Chennai,2025-11-07,2025-11-12,5,1508,Delivered
+SH020,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2025-11-11,2025-11-17,6,1138,Delivered
+SH021,S001,P001,China,Shanghai,Shanghai-Chennai,2025-11-11,2025-11-18,7,762,Delivered
+SH022,S004,P009,India,Mumbai,Mumbai-Pune,2025-11-13,2025-11-24,11,4958,Delivered
+SH023,S005,P003,Vietnam,HCMC,HCMC-Chennai,2025-11-14,2025-11-15,1,2308,Delivered
+SH024,S056,P058,China,Shanghai,Shanghai-Chennai,2025-11-19,2025-11-19,0,632,Delivered
+SH025,S020,P007,Singapore,Singapore,Singapore-Chennai,2025-11-21,2025-11-22,1,2761,Delivered
+SH026,S020,P053,Singapore,Singapore,Singapore-Chennai,2025-11-23,2025-11-29,6,2230,Delivered
+SH027,S007,P016,Japan,Nagoya,Nagoya-Chennai,2025-11-24,2025-11-26,2,3016,Delivered
+SH028,S004,P009,India,Mumbai,Mumbai-Pune,2025-11-27,2025-11-27,0,3643,Delivered
+SH029,S007,P016,Japan,Nagoya,Nagoya-Chennai,2025-11-29,2025-12-08,9,3624,Delivered
+SH030,S056,P058,China,Shanghai,Shanghai-Chennai,2025-12-02,2025-12-02,0,1793,On Time
+SH031,S013,P041,Poland,Gdansk,Gdansk-Chennai,2025-12-01,2025-12-01,0,1259,On Time
+SH032,S022,P020,China,Shanghai,Shanghai-Chennai,2025-12-06,2025-12-11,5,4985,Delayed
+SH033,S024,P021,Japan,Nagoya,Nagoya-Chennai,2025-12-04,2025-12-07,3,2206,Delayed
+SH034,S008,P054,USA,Los Angeles,LA-Mumbai,2025-12-08,2025-12-08,0,2595,On Time
+SH035,S035,P057,Sweden,Gothenburg,Gothenburg-Chennai,2025-12-12,2025-12-12,0,506,On Time
+SH036,S022,P020,China,Shanghai,Shanghai-Chennai,2025-12-13,2025-12-14,1,1041,Delayed
+SH037,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2025-12-14,2025-12-14,0,4450,On Time
+SH038,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2025-12-18,2025-12-21,3,1260,Delayed
+SH039,S002,P008,India,Mumbai,Mumbai-Pune,2025-12-18,2025-12-18,0,3095,On Time
+SH040,S014,P014,Czech Republic,Hamburg,Hamburg-Mumbai,2025-12-18,2025-12-29,11,3139,Delayed
+SH041,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2025-12-21,2025-12-21,0,924,On Time
+SH042,S020,P045,Singapore,Singapore,Singapore-Chennai,2025-12-26,2025-12-27,1,989,Delayed
+SH043,S020,P007,Singapore,Singapore,Singapore-Chennai,2025-12-28,2025-12-28,0,3158,On Time
+SH044,S007,P006,Japan,Nagoya,Nagoya-Chennai,2025-12-26,2026-01-03,8,1899,Delayed
+SH045,S013,P041,Poland,Gdansk,Gdansk-Chennai,2025-12-28,2025-12-29,1,4236,Delayed
+SH046,S020,P007,Singapore,Singapore,Singapore-Chennai,2025-12-30,2025-12-30,0,4796,On Time
+SH047,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-01-04,2026-01-04,0,4988,On Time
+SH048,S004,P042,India,Mumbai,Mumbai-Pune,2026-01-03,2026-01-11,8,2121,Delayed
+SH049,S007,P016,Japan,Nagoya,Nagoya-Chennai,2026-01-05,2026-01-05,0,3811,On Time
+SH050,S005,P003,Vietnam,HCMC,HCMC-Chennai,2026-01-07,2026-01-11,4,4036,Delayed
+SH051,S021,P056,China,Shanghai,Shanghai-Chennai,2026-01-11,2026-01-17,6,3174,Delayed
+SH052,S033,P059,India,Mumbai,Mumbai-Pune,2026-01-12,2026-01-23,11,1756,Delayed
+SH053,S004,P002,India,Mumbai,Mumbai-Pune,2026-01-16,2026-01-16,0,1660,On Time
+SH054,S004,P002,India,Mumbai,Mumbai-Pune,2026-01-15,2026-01-15,0,2546,On Time
+SH055,S014,P014,Czech Republic,Hamburg,Hamburg-Mumbai,2026-01-21,2026-01-24,3,2401,Delayed
+SH056,S021,P056,China,Shanghai,Shanghai-Chennai,2026-01-23,2026-02-02,10,3594,Delayed
+SH057,S004,P009,India,Mumbai,Mumbai-Pune,2026-01-21,2026-01-22,1,1118,Delayed
+SH058,S002,P008,India,Mumbai,Mumbai-Pune,2026-01-24,2026-01-30,6,1327,Delayed
+SH059,S013,P013,Poland,Gdansk,Gdansk-Chennai,2026-01-26,2026-01-26,0,1456,On Time
+SH060,S004,P051,India,Mumbai,Mumbai-Pune,2026-01-28,2026-02-08,11,3872,Delayed
+SH061,S003,P044,South Korea,Busan,Busan-Chennai,2026-01-31,2026-02-07,7,2940,Delayed
+SH062,S005,P040,Vietnam,HCMC,HCMC-Chennai,2026-02-03,2026-02-04,1,2660,Cancelled
+SH063,S022,P038,China,Shanghai,Shanghai-Chennai,2026-02-06,2026-02-10,4,3421,Delayed
+SH064,S007,P016,Japan,Nagoya,Nagoya-Chennai,2026-02-07,2026-02-08,1,4379,Delayed
+SH065,S013,P041,Poland,Gdansk,Gdansk-Chennai,2026-02-07,2026-02-07,0,4365,On Time
+SH066,S008,P054,USA,Los Angeles,LA-Mumbai,2026-02-09,2026-02-13,4,1254,Delayed
+SH067,S007,P022,Japan,Nagoya,Nagoya-Chennai,2026-02-11,2026-02-17,6,1043,Delayed
+SH068,S006,P018,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-02-15,2026-02-15,0,1791,On Time
+SH069,S021,P024,China,Shanghai,Shanghai-Chennai,2026-02-15,2026-02-18,3,2958,Delayed
+SH070,S020,P007,Singapore,Singapore,Singapore-Chennai,2026-02-18,2026-02-18,0,2295,On Time
+SH071,S007,P016,Japan,Nagoya,Nagoya-Chennai,2026-02-21,2026-03-06,13,2718,Delayed
+SH072,S047,P060,India,Mumbai,Mumbai-Pune,2026-02-23,2026-02-23,0,2411,On Time
+SH073,S007,P022,Japan,Nagoya,Nagoya-Chennai,2026-02-23,2026-02-23,0,3277,On Time
+SH074,S009,P048,Mexico,Veracruz,Veracruz-Mumbai,2026-02-25,2026-03-02,5,3680,Delayed
+SH075,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2026-03-02,2026-03-03,1,4249,Delayed
+SH076,S021,P056,China,Shanghai,Shanghai-Chennai,2026-03-03,2026-03-05,2,4981,Delayed
+SH077,S047,P060,India,Mumbai,Mumbai-Pune,2026-03-03,2026-03-03,0,3191,On Time
+SH078,S036,P033,Netherlands,Rotterdam,Rotterdam-Mumbai,2026-03-07,2026-03-16,9,1329,Delayed
+SH079,S020,P026,Singapore,Singapore,Singapore-Chennai,2026-03-10,2026-03-11,1,4975,Delayed
+SH080,S004,P051,India,Mumbai,Mumbai-Pune,2026-03-08,2026-03-09,1,2339,Delayed
+SH081,S003,P044,South Korea,Busan,Busan-Chennai,2026-03-14,2026-03-16,2,4283,Delayed
+SH082,S007,P006,Japan,Nagoya,Nagoya-Chennai,2026-03-12,2026-03-20,8,1571,Delayed
+SH083,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2026-03-14,2026-03-14,0,1281,Cancelled
+SH084,S006,P018,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-03-20,2026-03-20,0,656,On Time
+SH085,S021,P036,China,Shanghai,Shanghai-Chennai,2026-03-19,2026-03-23,4,2838,Delayed
+SH086,S020,P026,Singapore,Singapore,Singapore-Chennai,2026-03-21,2026-03-22,1,4121,Delayed
+SH087,S020,P026,Singapore,Singapore,Singapore-Chennai,2026-03-23,2026-04-01,9,1847,Delayed
+SH088,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2026-03-26,2026-03-29,3,2066,Delayed
+SH089,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2026-03-26,2026-03-26,0,2962,On Time
+SH090,S001,P001,China,Shanghai,Shanghai-Chennai,2026-03-29,2026-03-31,2,4642,Delayed
+SH091,S022,P055,China,Shanghai,Shanghai-Chennai,2026-03-30,2026-04-01,2,3639,Delayed
+SH092,S006,P046,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-04-03,2026-04-03,0,3858,On Time
+SH093,S025,P029,India,Mumbai,Mumbai-Pune,2026-04-03,2026-04-10,7,769,Delayed
+SH094,S020,P007,Singapore,Singapore,Singapore-Chennai,2026-04-08,2026-04-15,7,725,Delayed
+SH095,S002,P008,India,Mumbai,Mumbai-Pune,2026-04-10,2026-04-10,0,777,On Time
+SH096,S025,P049,India,Mumbai,Mumbai-Pune,2026-04-09,2026-04-15,6,2264,Delayed
+SH097,S033,P031,India,Mumbai,Mumbai-Pune,2026-04-14,2026-04-25,11,1322,Delayed
+SH098,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2026-04-13,2026-04-13,0,2673,On Time
+SH099,S007,P006,Japan,Nagoya,Nagoya-Chennai,2026-04-15,2026-04-19,4,1105,Delayed
+SH100,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-04-21,2026-04-28,7,1180,Delayed
+SH101,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2026-04-19,2026-04-21,2,816,Delayed
+SH102,S005,P010,Vietnam,HCMC,HCMC-Chennai,2026-04-25,2026-04-26,1,3916,Delayed
+SH103,S047,P060,India,Mumbai,Mumbai-Pune,2026-04-23,2026-05-07,14,824,Delayed
+SH104,S007,P016,Japan,Nagoya,Nagoya-Chennai,2026-04-27,2026-05-11,14,2612,Delayed
+SH105,S036,P033,Netherlands,Rotterdam,Rotterdam-Mumbai,2026-04-29,2026-05-03,4,1111,Delayed
+SH106,S013,P028,Poland,Gdansk,Gdansk-Chennai,2026-04-29,2026-05-03,4,1287,Delayed
+SH107,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2026-05-05,2026-05-14,9,4436,Delayed
+SH108,S020,P007,Singapore,Singapore,Singapore-Chennai,2026-05-03,2026-05-04,1,1607,Delayed
+SH109,S004,P051,India,Mumbai,Mumbai-Pune,2026-05-05,2026-05-05,0,1608,Cancelled
+SH110,S022,P020,China,Shanghai,Shanghai-Chennai,2026-05-10,2026-05-10,0,4766,Cancelled
+SH111,S021,P036,China,Shanghai,Shanghai-Chennai,2026-05-09,2026-05-09,0,2950,On Time
+SH112,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-05-12,2026-05-13,1,1115,Delayed
+SH113,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2026-05-17,,0,3617,In Transit
+SH114,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2026-05-18,,4,1152,In Transit
+SH115,S005,P003,Vietnam,HCMC,HCMC-Chennai,2026-05-20,,0,2845,In Transit
+SH116,S003,P011,South Korea,Busan,Busan-Chennai,2026-05-20,,5,2826,In Transit
+SH117,S035,P057,Sweden,Gothenburg,Gothenburg-Chennai,2026-05-21,,3,921,In Transit
+SH118,S004,P027,India,Mumbai,Mumbai-Pune,2026-05-27,,0,2019,In Transit
+SH119,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2026-05-25,,0,3147,In Transit
+SH120,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2026-05-30,,2,516,In Transit
+SH121,S004,P009,India,Mumbai,Mumbai-Pune,2026-05-31,,11,2760,In Transit
+SH122,S024,P034,Japan,Nagoya,Nagoya-Chennai,2026-06-04,,3,3698,In Transit
+SH123,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2026-06-04,,0,750,In Transit
+SH124,S021,P024,China,Shanghai,Shanghai-Chennai,2026-06-04,,0,3291,In Transit
+SH125,S013,P028,Poland,Gdansk,Gdansk-Chennai,2026-06-09,,0,4635,In Transit
+SH126,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2026-06-09,,2,1207,In Transit
+SH127,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2026-06-11,,0,712,In Transit
+SH128,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-06-15,,1,850,In Transit
+SH129,S007,P006,Japan,Nagoya,Nagoya-Chennai,2026-06-16,2026-06-28,12,3597,Cancelled
+SH130,S036,P033,Netherlands,Rotterdam,Rotterdam-Mumbai,2026-06-19,,0,4693,In Transit
+SH131,S025,P029,India,Mumbai,Mumbai-Pune,2026-06-18,,0,3851,In Transit
+SH132,S021,P035,China,Shanghai,Shanghai-Chennai,2026-06-24,,6,1321,In Transit
+SH133,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2026-06-23,,0,1411,In Transit
+SH134,S002,P008,India,Mumbai,Mumbai-Pune,2026-06-26,,0,1646,In Transit
+SH135,S020,P015,Singapore,Singapore,Singapore-Chennai,2026-06-27,,0,4891,In Transit
+SH136,S006,P018,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-07-01,,0,2077,In Transit
+SH137,S003,P023,South Korea,Busan,Busan-Chennai,2026-07-04,,4,2695,In Transit
+SH138,S025,P029,India,Mumbai,Mumbai-Pune,2026-07-06,,0,1333,In Transit
+SH139,S006,P046,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-07-04,,12,2091,In Transit
+SH140,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-07-09,,0,4846,In Transit
+SH141,S022,P038,China,Shanghai,Shanghai-Chennai,2026-07-09,,0,3444,In Transit
+SH142,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2026-07-14,,0,4304,In Transit
+SH143,S024,P034,Japan,Nagoya,Nagoya-Chennai,2026-07-13,,4,1338,In Transit
+SH144,S005,P040,Vietnam,HCMC,HCMC-Chennai,2026-07-16,,1,3198,In Transit
+SH145,S007,P016,Japan,Nagoya,Nagoya-Chennai,2026-07-18,,2,4682,In Transit
+SH146,S025,P049,India,Mumbai,Mumbai-Pune,2026-07-18,,0,4346,In Transit
+SH147,S021,P036,China,Shanghai,Shanghai-Chennai,2026-07-23,,1,798,In Transit
+SH148,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2026-07-22,,0,2329,In Transit
+SH149,S004,P002,India,Mumbai,Mumbai-Pune,2026-07-27,,0,704,In Transit
+SH150,S003,P044,South Korea,Busan,Busan-Chennai,2026-07-27,,2,1445,In Transit
+SH151,S005,P043,Vietnam,HCMC,HCMC-Chennai,2026-07-29,,3,4142,In Transit
+SH152,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-07-31,,3,612,In Transit
+SH153,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-08-03,,0,3007,In Transit
+SH154,S020,P045,Singapore,Singapore,Singapore-Chennai,2026-08-03,,0,505,In Transit
+SH155,S008,P054,USA,Los Angeles,LA-Mumbai,2026-08-08,,0,3443,In Transit
+SH156,S056,P058,China,Shanghai,Shanghai-Chennai,2026-08-08,,0,4015,In Transit
+SH157,S001,P001,China,Shanghai,Shanghai-Chennai,2026-08-12,,1,2413,In Transit
+SH158,S025,P029,India,Mumbai,Mumbai-Pune,2026-08-13,,0,1179,In Transit
+SH159,S020,P026,Singapore,Singapore,Singapore-Chennai,2026-08-15,,1,1066,In Transit
+SH160,S022,P020,China,Shanghai,Shanghai-Chennai,2026-08-19,,3,3430,In Transit
+SH161,S020,P015,Singapore,Singapore,Singapore-Chennai,2026-08-17,,0,1816,In Transit
+SH162,S013,P041,Poland,Gdansk,Gdansk-Chennai,2026-08-23,,0,2968,In Transit
+SH163,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2026-08-24,,2,4854,In Transit
+SH164,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2026-08-24,,5,2241,In Transit
+SH165,S022,P020,China,Shanghai,Shanghai-Chennai,2026-08-29,,11,3211,In Transit
+SH166,S007,P022,Japan,Nagoya,Nagoya-Chennai,2026-08-28,,0,1384,In Transit
+SH167,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-09-02,,0,735,In Transit
+SH168,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2026-09-01,,4,3603,In Transit
+SH169,S001,P001,China,Shanghai,Shanghai-Chennai,2026-09-03,,14,1682,In Transit
+SH170,S005,P040,Vietnam,HCMC,HCMC-Chennai,2026-09-06,,2,1985,In Transit
+SH171,S047,P060,India,Mumbai,Mumbai-Pune,2026-09-07,,1,4803,In Transit
+SH172,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2026-09-09,,3,4064,In Transit
+SH173,S020,P026,Singapore,Singapore,Singapore-Chennai,2026-09-11,,1,1312,In Transit
+SH174,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2026-09-14,,0,1573,In Transit
+SH175,S004,P002,India,Mumbai,Mumbai-Pune,2026-09-16,,1,1476,In Transit
+SH176,S003,P023,South Korea,Busan,Busan-Chennai,2026-09-17,,1,3633,In Transit
+SH177,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2026-09-19,,5,3407,In Transit
+SH178,S025,P049,India,Mumbai,Mumbai-Pune,2026-09-20,,0,2389,In Transit
+SH179,S022,P038,China,Shanghai,Shanghai-Chennai,2026-09-23,,0,562,In Transit
+SH180,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2026-09-25,,4,1370,In Transit
+SH181,S006,P037,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-09-27,,0,4491,In Transit
+SH182,S007,P006,Japan,Nagoya,Nagoya-Chennai,2026-10-02,,4,3298,In Transit
+SH183,S013,P028,Poland,Gdansk,Gdansk-Chennai,2026-09-30,,0,2800,In Transit
+SH184,S020,P045,Singapore,Singapore,Singapore-Chennai,2026-10-05,,11,3032,In Transit
+SH185,S001,P001,China,Shanghai,Shanghai-Chennai,2026-10-07,,0,2840,In Transit
+SH186,S004,P051,India,Mumbai,Mumbai-Pune,2026-10-08,,0,1619,In Transit
+SH187,S009,P048,Mexico,Veracruz,Veracruz-Mumbai,2026-10-09,,3,4878,In Transit
+SH188,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2026-10-10,,7,2858,In Transit
+SH189,S008,P054,USA,Los Angeles,LA-Mumbai,2026-10-13,,6,2104,In Transit
+SH190,S003,P044,South Korea,Busan,Busan-Chennai,2026-10-18,,1,1157,In Transit
+SH191,S005,P043,Vietnam,HCMC,HCMC-Chennai,2026-10-19,,2,978,In Transit
+SH192,S003,P023,South Korea,Busan,Busan-Chennai,2026-10-19,,0,3924,In Transit
+SH193,S004,P005,India,Mumbai,Mumbai-Pune,2026-10-21,,1,3130,In Transit
+SH194,S033,P031,India,Mumbai,Mumbai-Pune,2026-10-26,,10,990,In Transit
+SH195,S005,P010,Vietnam,HCMC,HCMC-Chennai,2026-10-25,,0,4119,In Transit
+SH196,S004,P002,India,Mumbai,Mumbai-Pune,2026-10-29,,1,4002,In Transit
+SH197,S014,P014,Czech Republic,Hamburg,Hamburg-Mumbai,2026-10-30,,0,3414,In Transit
+SH198,S022,P038,China,Shanghai,Shanghai-Chennai,2026-10-31,,5,4733,In Transit
+SH199,S003,P047,South Korea,Busan,Busan-Chennai,2026-11-03,,8,1747,In Transit
+SH200,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2026-11-05,,3,2505,In Transit
+SH201,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2026-11-07,,1,1716,In Transit
+SH202,S021,P056,China,Shanghai,Shanghai-Chennai,2026-11-08,,0,1673,In Transit
+SH203,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-11-12,,0,2209,In Transit
+SH204,S004,P009,India,Mumbai,Mumbai-Pune,2026-11-14,,1,2612,In Transit
+SH205,S020,P007,Singapore,Singapore,Singapore-Chennai,2026-11-16,,0,1086,In Transit
+SH206,S035,P057,Sweden,Gothenburg,Gothenburg-Chennai,2026-11-17,,0,1642,In Transit
+SH207,S005,P003,Vietnam,HCMC,HCMC-Chennai,2026-11-17,,1,3392,In Transit
+SH208,S003,P011,South Korea,Busan,Busan-Chennai,2026-11-22,,1,4146,In Transit
+SH209,S021,P056,China,Shanghai,Shanghai-Chennai,2026-11-22,,3,2790,In Transit
+SH210,S024,P021,Japan,Nagoya,Nagoya-Chennai,2026-11-25,,12,3493,In Transit
+SH211,S003,P044,South Korea,Busan,Busan-Chennai,2026-11-28,,0,2631,In Transit
+SH212,S024,P034,Japan,Nagoya,Nagoya-Chennai,2026-11-30,,3,1808,In Transit
+SH213,S003,P011,South Korea,Busan,Busan-Chennai,2026-12-01,,1,677,In Transit
+SH214,S022,P020,China,Shanghai,Shanghai-Chennai,2026-12-04,,0,3885,In Transit
+SH215,S022,P038,China,Shanghai,Shanghai-Chennai,2026-12-04,,4,1399,In Transit
+SH216,S005,P010,Vietnam,HCMC,HCMC-Chennai,2026-12-05,,0,4164,In Transit
+SH217,S035,P057,Sweden,Gothenburg,Gothenburg-Chennai,2026-12-10,,0,678,In Transit
+SH218,S005,P040,Vietnam,HCMC,HCMC-Chennai,2026-12-12,,0,2706,In Transit
+SH219,S021,P056,China,Shanghai,Shanghai-Chennai,2026-12-12,,5,3541,In Transit
+SH220,S056,P058,China,Shanghai,Shanghai-Chennai,2026-12-13,,12,4542,In Transit
+SH221,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2026-12-19,,8,551,In Transit
+SH222,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2026-12-19,,0,4298,In Transit
+SH223,S022,P055,China,Shanghai,Shanghai-Chennai,2026-12-20,,10,2167,In Transit
+SH224,S020,P015,Singapore,Singapore,Singapore-Chennai,2026-12-25,,1,4209,In Transit
+SH225,S021,P036,China,Shanghai,Shanghai-Chennai,2026-12-24,,0,959,In Transit
+SH226,S047,P060,India,Mumbai,Mumbai-Pune,2026-12-29,,0,1024,In Transit
+SH227,S006,P046,Taiwan,Kaohsiung,Kaohsiung-Chennai,2026-12-30,,0,3834,In Transit
+SH228,S013,P041,Poland,Gdansk,Gdansk-Chennai,2026-12-30,,1,4761,In Transit
+SH229,S013,P028,Poland,Gdansk,Gdansk-Chennai,2027-01-01,,12,901,In Transit
+SH230,S056,P058,China,Shanghai,Shanghai-Chennai,2027-01-06,,13,2573,In Transit
+SH231,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2027-01-08,,12,3621,In Transit
+SH232,S004,P002,India,Mumbai,Mumbai-Pune,2027-01-10,,14,3821,In Transit
+SH233,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2027-01-08,,0,2574,In Transit
+SH234,S009,P039,Mexico,Veracruz,Veracruz-Mumbai,2027-01-12,,0,1590,In Transit
+SH235,S004,P002,India,Mumbai,Mumbai-Pune,2027-01-16,,11,2038,In Transit
+SH236,S005,P010,Vietnam,HCMC,HCMC-Chennai,2027-01-16,,0,1266,In Transit
+SH237,S033,P059,India,Mumbai,Mumbai-Pune,2027-01-20,,1,507,In Transit
+SH238,S004,P005,India,Mumbai,Mumbai-Pune,2027-01-18,,0,1398,In Transit
+SH239,S033,P031,India,Mumbai,Mumbai-Pune,2027-01-22,,0,991,In Transit
+SH240,S021,P035,China,Shanghai,Shanghai-Chennai,2027-01-22,,9,792,In Transit
+SH241,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2027-01-26,,6,3653,In Transit
+SH242,S056,P058,China,Shanghai,Shanghai-Chennai,2027-01-30,,0,3204,In Transit
+SH243,S013,P013,Poland,Gdansk,Gdansk-Chennai,2027-02-01,,0,3041,In Transit
+SH244,S014,P030,Czech Republic,Hamburg,Hamburg-Mumbai,2027-02-01,,0,844,In Transit
+SH245,S005,P040,Vietnam,HCMC,HCMC-Chennai,2027-02-01,,2,4164,In Transit
+SH246,S002,P008,India,Mumbai,Mumbai-Pune,2027-02-06,,1,2648,In Transit
+SH247,S005,P003,Vietnam,HCMC,HCMC-Chennai,2027-02-05,,8,1341,In Transit
+SH248,S020,P026,Singapore,Singapore,Singapore-Chennai,2027-02-11,,0,2172,In Transit
+SH249,S033,P031,India,Mumbai,Mumbai-Pune,2027-02-09,,0,4738,In Transit
+SH250,S013,P028,Poland,Gdansk,Gdansk-Chennai,2027-02-11,,9,3657,In Transit
+SH251,S025,P029,India,Mumbai,Mumbai-Pune,2027-02-15,,5,4403,In Transit
+SH252,S021,P056,China,Shanghai,Shanghai-Chennai,2027-02-15,,0,3226,In Transit
+SH253,S021,P035,China,Shanghai,Shanghai-Chennai,2027-02-18,,0,3348,In Transit
+SH254,S013,P028,Poland,Gdansk,Gdansk-Chennai,2027-02-21,,3,3527,In Transit
+SH255,S007,P016,Japan,Nagoya,Nagoya-Chennai,2027-02-23,,6,4671,In Transit
+SH256,S003,P011,South Korea,Busan,Busan-Chennai,2027-02-25,,7,4334,In Transit
+SH257,S056,P058,China,Shanghai,Shanghai-Chennai,2027-02-28,,0,2692,In Transit
+SH258,S047,P060,India,Mumbai,Mumbai-Pune,2027-03-02,,0,2204,In Transit
+SH259,S001,P001,China,Shanghai,Shanghai-Chennai,2027-03-02,,7,4284,In Transit
+SH260,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2027-03-06,,0,2318,In Transit
+SH261,S006,P017,Taiwan,Kaohsiung,Kaohsiung-Chennai,2027-03-07,,3,3120,In Transit
+SH262,S004,P009,India,Mumbai,Mumbai-Pune,2027-03-11,,0,1372,In Transit
+SH263,S007,P016,Japan,Nagoya,Nagoya-Chennai,2027-03-09,,13,4365,In Transit
+SH264,S004,P009,India,Mumbai,Mumbai-Pune,2027-03-11,,0,2333,In Transit
+SH265,S021,P036,China,Shanghai,Shanghai-Chennai,2027-03-14,,7,1449,In Transit
+SH266,S002,P008,India,Mumbai,Mumbai-Pune,2027-03-19,,7,4438,In Transit
+SH267,S004,P042,India,Mumbai,Mumbai-Pune,2027-03-21,,1,4125,In Transit
+SH268,S033,P059,India,Mumbai,Mumbai-Pune,2027-03-19,,4,2782,In Transit
+SH269,S005,P010,Vietnam,HCMC,HCMC-Chennai,2027-03-22,,10,4460,In Transit
+SH270,S022,P055,China,Shanghai,Shanghai-Chennai,2027-03-26,,3,3999,In Transit
+SH271,S047,P060,India,Mumbai,Mumbai-Pune,2027-03-25,,0,4059,In Transit
+SH272,S003,P023,South Korea,Busan,Busan-Chennai,2027-03-30,,0,2924,In Transit
+SH273,S005,P003,Vietnam,HCMC,HCMC-Chennai,2027-04-02,,0,2855,In Transit
+SH274,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2027-04-02,,10,1822,In Transit
+SH275,S047,P060,India,Mumbai,Mumbai-Pune,2027-04-04,,3,2107,In Transit
+SH276,S010,P050,Thailand,Bangkok,Bangkok-Chennai,2027-04-07,,0,1993,In Transit
+SH277,S004,P009,India,Mumbai,Mumbai-Pune,2027-04-06,2027-04-16,10,674,Cancelled
+SH278,S021,P024,China,Shanghai,Shanghai-Chennai,2027-04-10,,0,910,In Transit
+SH279,S025,P049,India,Mumbai,Mumbai-Pune,2027-04-10,,0,3193,In Transit
+SH280,S005,P003,Vietnam,HCMC,HCMC-Chennai,2027-04-12,,7,1740,In Transit
+SH281,S004,P027,India,Mumbai,Mumbai-Pune,2027-04-14,,0,2211,In Transit
+SH282,S005,P043,Vietnam,HCMC,HCMC-Chennai,2027-04-18,,0,4233,In Transit
+SH283,S021,P056,China,Shanghai,Shanghai-Chennai,2027-04-22,,2,2195,In Transit
+SH284,S003,P023,South Korea,Busan,Busan-Chennai,2027-04-23,,0,1383,In Transit
+SH285,S010,P019,Thailand,Bangkok,Bangkok-Chennai,2027-04-26,,0,4639,In Transit
+SH286,S047,P060,India,Mumbai,Mumbai-Pune,2027-04-27,,1,2823,In Transit
+SH287,S003,P044,South Korea,Busan,Busan-Chennai,2027-04-27,,13,1636,In Transit
+SH288,S020,P053,Singapore,Singapore,Singapore-Chennai,2027-05-01,,0,4747,In Transit
+SH289,S005,P010,Vietnam,HCMC,HCMC-Chennai,2027-05-02,,0,1863,In Transit
+SH290,S003,P047,South Korea,Busan,Busan-Chennai,2027-05-05,,1,822,In Transit
+SH291,S011,P052,Malaysia,Port Klang,Klang-Chennai,2027-05-04,,0,3704,In Transit
+SH292,S005,P043,Vietnam,HCMC,HCMC-Chennai,2027-05-06,,10,643,In Transit
+SH293,S024,P021,Japan,Nagoya,Nagoya-Chennai,2027-05-08,,0,1673,In Transit
+SH294,S035,P032,Sweden,Gothenburg,Gothenburg-Chennai,2027-05-10,,0,967,In Transit
+SH295,S035,P057,Sweden,Gothenburg,Gothenburg-Chennai,2027-05-13,,4,2278,In Transit
+SH296,S009,P025,Mexico,Veracruz,Veracruz-Mumbai,2027-05-18,,0,2144,In Transit
+SH297,S011,P052,Malaysia,Port Klang,Klang-Chennai,2027-05-16,,0,4811,In Transit
+SH298,S020,P053,Singapore,Singapore,Singapore-Chennai,2027-05-22,,0,4132,In Transit
+SH299,S024,P034,Japan,Nagoya,Nagoya-Chennai,2027-05-20,,0,867,In Transit
+SH300,S009,P012,Mexico,Veracruz,Veracruz-Mumbai,2027-05-26,,0,3251,In Transit

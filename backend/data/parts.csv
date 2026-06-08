@@ -1,4 +1,61 @@
-part_id,part_name,category,material,criticality,current_supplier_id,vehicle_model,plant,line,daily_consumption,current_inventory,safety_stock
-P001,Infotainment MCU,Semiconductor,Silicon,High,S001,EV SUV X,Pune Plant,Line 2,420,4500,5000
-P002,Battery Tray,EV Component,Aluminium,High,S004,EV SUV X,Pune Plant,Line 3,180,2900,2500
-P003,Wiring Harness Connector,Electrical,Copper Plastic,Medium,S005,Hatchback Z,Chennai Plant,Line 1,650,12000,8000
+part_id,part_name,category,material,criticality,current_supplier_id,vehicle_model,plant,line,daily_consumption,current_inventory,safety_stock,commodity,demand_volatility
+P001,Infotainment MCU,Semiconductor,Silicon,High,S001,EV SUV X,Pune Plant,Line 2,420,4500,5000,Semiconductor Memory,0.95
+P002,Battery Tray,EV Component,Aluminium,High,S004,EV SUV X,Pune Plant,Line 3,180,2900,2500,Aluminium,0.52
+P003,Wiring Harness Connector,Electrical,Copper Plastic,Medium,S005,Hatchback Z,Chennai Plant,Line 1,650,12000,8000,Copper,0.46
+P004,Body Control Unit Chip,Semiconductor,Silicon,High,S001,Premium Sedan Y,Chennai Plant,Line 2,260,3200,4000,Semiconductor Memory,0.71
+P005,Motor Controller Housing,EV Component,Aluminium Alloy,Medium,S004,EV SUV X,Pune Plant,Line 3,120,2100,1800,Aluminium,0.4
+P006,ADAS Central ECU,Semiconductor,Silicon,High,S007,EV SUV X,Pune Plant,Line 2,200,2200,3000,Semiconductor Memory,0.88
+P007,LiDAR Sensor Module,Sensor,Silicon Optical,High,S020,EV SUV X,Pune Plant,Line 4,150,1800,2500,Semiconductor Memory,0.82
+P008,Battery Management System,EV Component,PCB Composite,High,S002,EV SUV X,Pune Plant,Line 3,180,1600,2200,Semiconductor Memory,0.79
+P009,Motor Stator Lamination,EV Component,Electrical Steel,High,S004,EV SUV X,Pune Plant,Line 3,200,3500,3000,Steel,0.55
+P010,Copper Busbar,Electrical,Copper,Medium,S005,EV SUV X,Pune Plant,Line 3,350,6200,5000,Copper,0.48
+P011,Power Inverter Module,Power Electronics,Silicon Carbide,High,S003,EV SUV X,Chennai Plant,Line 4,130,1400,2000,Semiconductor Memory,0.84
+P012,Thermal Management Plate,EV Component,Aluminium,Medium,S009,Premium Sedan Y,Pune Plant,Line 3,160,2800,2400,Aluminium,0.44
+P013,Door Control Module,Body Electronics,PCB,Medium,S013,Premium Sedan Y,Chennai Plant,Line 1,440,7200,6000,Semiconductor Memory,0.61
+P014,HVAC Controller Unit,Body Electronics,PCB,Medium,S014,Premium Sedan Y,Chennai Plant,Line 1,280,4800,4000,Semiconductor Memory,0.58
+P015,Rear Camera Module,Sensor,CMOS Silicon,High,S020,Hatchback Z,Chennai Plant,Line 1,380,5500,5000,Semiconductor Memory,0.72
+P016,Wheel Speed Sensor,Sensor,Steel Silicon,Medium,S007,Hatchback Z,Chennai Plant,Line 1,520,8500,7000,Steel,0.45
+P017,Engine ECU,Semiconductor,Silicon,High,S006,Hatchback Z,Chennai Plant,Line 2,310,4200,4500,Semiconductor Memory,0.75
+P018,Transmission ECU,Semiconductor,Silicon,High,S006,Premium Sedan Y,Chennai Plant,Line 2,240,3100,3500,Semiconductor Memory,0.68
+P019,High Voltage Cable,Electrical,Copper Insulated,High,S010,EV SUV X,Pune Plant,Line 3,280,4800,4200,Copper,0.55
+P020,Battery Cell Casing,EV Component,Aluminium,High,S022,EV SUV X,Pune Plant,Line 3,220,3200,3000,Aluminium,0.6
+P021,Traction Motor Shaft,EV Component,Steel Alloy,High,S024,EV SUV X,Pune Plant,Line 3,140,2100,2000,Steel,0.5
+P022,Rotor Core Assembly,EV Component,Silicon Steel,High,S007,EV SUV X,Pune Plant,Line 3,180,2600,2500,Steel,0.52
+P023,RADAR Front Module,Sensor,Silicon,High,S003,EV SUV X,Pune Plant,Line 4,120,1600,2000,Semiconductor Memory,0.86
+P024,Lithium Cell Module,EV Component,Lithium Cobalt,High,S021,EV SUV X,Pune Plant,Line 3,90,1100,1500,Lithium,0.91
+P025,Battery Pack Frame,EV Component,Aluminium,High,S009,EV SUV X,Pune Plant,Line 3,120,1900,2000,Aluminium,0.58
+P026,SiC Power Module,Power Electronics,Silicon Carbide,High,S020,EV SUV X,Pune Plant,Line 4,100,1400,1800,Semiconductor Memory,0.89
+P027,Nickel Busbar,Electrical,Nickel Alloy,Medium,S004,Electric Truck W,Manesar Plant,Line 1,200,4000,3500,Nickel,0.51
+P028,Cabin ECU,Body Electronics,PCB,Medium,S013,Electric Truck W,Manesar Plant,Line 2,260,4500,4000,Semiconductor Memory,0.64
+P029,Air Compressor Housing,Powertrain,Steel Aluminium,Medium,S025,Electric Truck W,Manesar Plant,Line 2,110,2200,2000,Steel,0.46
+P030,CAN Gateway Module,Semiconductor,PCB Silicon,High,S014,Electric Truck W,Manesar Plant,Line 2,180,2900,3000,Semiconductor Memory,0.72
+P031,Magnesium Housing,Body,Magnesium Alloy,Medium,S033,Performance Coupe V,Chennai Plant,Line 5,90,1800,1500,Magnesium,0.42
+P032,Carbon Fibre Panel,Body,Carbon Fibre,Medium,S035,Performance Coupe V,Chennai Plant,Line 5,70,1400,1200,Carbon Fibre,0.45
+P033,Platinum Catalyst,Powertrain,Platinum,Low,S036,Hatchback Z,Chennai Plant,Line 1,40,800,700,Platinum,0.38
+P034,Palladium Contact,Electrical,Palladium,Low,S024,Premium Sedan Y,Chennai Plant,Line 1,60,1200,1000,Palladium,0.35
+P035,Cobalt Battery Anode,EV Component,Cobalt Compound,High,S021,EV SUV X,Pune Plant,Line 3,80,1000,1200,Cobalt,0.87
+P036,Rare Earth Motor Magnet,EV Component,NdFeB,High,S021,EV SUV X,Pune Plant,Line 3,100,1400,1600,Rare Earth Elements,0.93
+P037,Silicon Carbide Wafer,Semiconductor,Silicon Carbide,High,S006,EV SUV X,Pune Plant,Line 2,60,800,1000,Silicon,0.84
+P038,Nickel Cathode Sheet,EV Component,Nickel Alloy,High,S022,EV SUV X,Pune Plant,Line 3,120,1800,2000,Nickel,0.76
+P039,Aluminium Casting Frame,Body,Aluminium Die Cast,Medium,S009,Electric Truck W,Manesar Plant,Line 1,140,2600,2200,Aluminium,0.49
+P040,Copper Terminal Block,Electrical,Copper,Low,S005,Hatchback Z,Chennai Plant,Line 1,300,6000,5000,Copper,0.42
+P041,Seat Control Module,Body Electronics,PCB,Medium,S013,Premium Sedan Y,Chennai Plant,Line 1,200,3500,3000,Semiconductor Memory,0.55
+P042,Fuel Cell Stack Frame,EV Component,Aluminium,High,S004,Electric Truck W,Manesar Plant,Line 1,110,1800,2000,Aluminium,0.62
+P043,EV Charging Port Module,Electrical,Copper Plastic,High,S005,EV SUV X,Pune Plant,Line 3,160,2400,2200,Copper,0.58
+P044,Radar Side Module,Sensor,Silicon,High,S003,EV SUV X,Pune Plant,Line 4,100,1500,1800,Semiconductor Memory,0.83
+P045,Ultrasonic Sensor Array,Sensor,CMOS Silicon,Medium,S020,Hatchback Z,Chennai Plant,Line 1,250,4000,3500,Semiconductor Memory,0.68
+P046,Vehicle Stability ECU,Semiconductor,Silicon,High,S006,Premium Sedan Y,Chennai Plant,Line 2,180,2800,3200,Semiconductor Memory,0.74
+P047,LED Headlamp Driver,Power Electronics,Silicon,Medium,S003,Performance Coupe V,Chennai Plant,Line 5,80,1600,1400,Semiconductor Memory,0.52
+P048,Aluminium Wheel Rim,Body,Aluminium,Low,S009,Hatchback Z,Chennai Plant,Line 1,120,2200,1800,Aluminium,0.35
+P049,Steel Chassis Bracket,Body,Steel Alloy,Medium,S025,Electric Truck W,Manesar Plant,Line 1,200,3800,3200,Steel,0.42
+P050,Copper Coolant Pipe,Electrical,Copper,Medium,S010,EV SUV X,Pune Plant,Line 3,180,3200,2800,Copper,0.48
+P051,Battery Cooling Plate,EV Component,Aluminium,High,S004,EV SUV X,Pune Plant,Line 3,130,2100,2400,Aluminium,0.56
+P052,Thermal Interface Pad,EV Component,Silicon Rubber,Medium,S011,EV SUV X,Pune Plant,Line 3,400,7000,6000,Silicon,0.44
+P053,OBC Converter Unit,Power Electronics,Silicon Carbide,High,S020,EV SUV X,Pune Plant,Line 4,90,1200,1600,Semiconductor Memory,0.87
+P054,DC-DC Converter,Power Electronics,Silicon,High,S008,EV SUV X,Pune Plant,Line 4,110,1500,1800,Semiconductor Memory,0.82
+P055,Nickel Foam Electrode,EV Component,Nickel Alloy,High,S022,EV SUV X,Pune Plant,Line 3,95,1400,1600,Nickel,0.79
+P056,Cobalt Oxide Cathode,EV Component,Cobalt Compound,High,S021,EV SUV X,Pune Plant,Line 3,75,950,1100,Cobalt,0.89
+P057,Carbon Black Anode,EV Component,Carbon Fibre,Medium,S035,EV SUV X,Pune Plant,Line 3,150,2500,2200,Carbon Fibre,0.51
+P058,NdFeB Ring Magnet,EV Component,NdFeB,High,S056,EV SUV X,Pune Plant,Line 3,85,1300,1500,Rare Earth Elements,0.91
+P059,Magnesium Gear Housing,Powertrain,Magnesium Alloy,Medium,S033,Electric Truck W,Manesar Plant,Line 2,70,1300,1100,Magnesium,0.45
+P060,Platinum Spark Plug,Powertrain,Platinum,Low,S047,Hatchback Z,Chennai Plant,Line 1,50,950,800,Platinum,0.36

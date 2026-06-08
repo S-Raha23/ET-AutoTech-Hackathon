@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   BarChart, Bar, ReferenceLine, Area, AreaChart, Cell,
@@ -6,8 +6,25 @@ import {
 import {
   Shield, LayoutDashboard, Share2, AlertTriangle, GitBranch, Activity,
   PackageSearch, Cpu, TrendingDown, TrendingUp, ChevronRight, Circle,
-  Factory, Truck, Globe2, CheckCircle2, XCircle, Zap, IndianRupee,
+  Factory, Truck, Globe2, Zap, IndianRupee,
+  MessageSquare, FlaskConical, Send, Loader2, Sparkles, Bot, Brain,
+  ChevronDown, ChevronUp, RefreshCw,
 } from "lucide-react";
+
+/* ============================================================================
+   AI API client — calls the FastAPI backend's AI endpoints
+   ========================================================================== */
+
+const API_BASE = "http://localhost:8000";
+
+async function apiFetch(path, options = {}) {
+  const res = await fetch(`${API_BASE}${path}`, {
+    headers: { "Content-Type": "application/json", ...(options.headers || {}) },
+    ...options,
+  });
+  if (!res.ok) throw new Error(`API ${res.status}`);
+  return res.json();
+}
 
 /* ============================================================================
    AutoShield AI — Supply Chain Resilience & Smart Manufacturing Copilot
@@ -278,12 +295,14 @@ const RiskMeter = ({ score }) => {
 /* ------------------------------ SIDEBAR ----------------------------------- */
 
 const NAV = [
-  { id:"dash",   label:"Command Dashboard", icon: LayoutDashboard },
-  { id:"graph",  label:"Supply Chain Twin", icon: Share2 },
-  { id:"risk",   label:"Risk Detail",       icon: AlertTriangle },
-  { id:"sim",    label:"Sourcing Simulator",icon: GitBranch },
-  { id:"qual",   label:"Quality Copilot",   icon: Activity },
-  { id:"erp",    label:"ERP Reorder",       icon: PackageSearch },
+  { id:"dash",     label:"Command Dashboard",  icon: LayoutDashboard },
+  { id:"graph",    label:"Supply Chain Twin",  icon: Share2 },
+  { id:"risk",     label:"Risk Detail",        icon: AlertTriangle },
+  { id:"sim",      label:"Sourcing Simulator", icon: GitBranch },
+  { id:"qual",     label:"Quality Copilot",    icon: Activity },
+  { id:"erp",      label:"ERP Reorder",        icon: PackageSearch },
+  { id:"copilot",  label:"AI Copilot",         icon: MessageSquare, ai: true },
+  { id:"scenario", label:"Scenario Planner",   icon: FlaskConical,  ai: true },
 ];
 
 function Sidebar({ page, setPage }) {
@@ -299,19 +318,33 @@ function Sidebar({ page, setPage }) {
         </div>
       </div>
       <nav className="flex-1 py-3">
-        {NAV.map(n => {
+        {NAV.map((n, i) => {
           const active = page === n.id;
+          const isFirst = i > 0 && NAV[i - 1].ai !== n.ai && n.ai;
           return (
-            <button key={n.id} onClick={() => setPage(n.id)}
-              className="w-full flex items-center gap-3 px-5 py-2.5 text-sm transition-colors"
-              style={{
-                color: active ? C.text : C.dim,
-                background: active ? `${C.accent}14` : "transparent",
-                borderLeft: `2px solid ${active ? C.accent : "transparent"}`,
-              }}>
-              <n.icon size={16} style={{ color: active ? C.accent : C.faint }} />
-              {n.label}
-            </button>
+            <React.Fragment key={n.id}>
+              {isFirst && (
+                <div className="mx-5 my-2 flex items-center gap-2">
+                  <div style={{ flex:1, height:1, background: C.border }} />
+                  <span className="text-[9px] uppercase tracking-widest font-bold" style={{ color: C.accent }}>AI</span>
+                  <div style={{ flex:1, height:1, background: C.border }} />
+                </div>
+              )}
+              <button onClick={() => setPage(n.id)}
+                className="w-full flex items-center gap-3 px-5 py-2.5 text-sm transition-colors"
+                style={{
+                  color: active ? C.text : C.dim,
+                  background: active ? (n.ai ? `${C.accent}1e` : `${C.accent}14`) : "transparent",
+                  borderLeft: `2px solid ${active ? C.accent : "transparent"}`,
+                }}>
+                <n.icon size={16} style={{ color: active ? C.accent : n.ai ? `${C.accent}88` : C.faint }} />
+                {n.label}
+                {n.ai && !active && (
+                  <span className="ml-auto text-[9px] px-1.5 py-0.5 rounded font-bold uppercase"
+                    style={{ background:`${C.accent}22`, color: C.accent }}>AI</span>
+                )}
+              </button>
+            </React.Fragment>
           );
         })}
       </nav>
@@ -348,6 +381,21 @@ function Dashboard({ go }) {
   const mcu = PART_RISK.find(p => p.id === "P001");
   const summary = `AutoShield has detected ${CRITICAL_COUNT} critical supply-chain risk affecting EV SUV X production. The highest is Infotainment MCU from ElectroChip Asia — inventory cover of only ${mcu.cover.toFixed(1)} days and a predicted line-stop probability of ${Math.round(mcu.lsp*100)}%. Immediate mitigation can cut estimated production loss from ${fmtCr(mcu.loss)} to ₹1.10 Cr.`;
 
+  const [briefing, setBriefing] = useState(null);
+  const [briefingLoading, setBriefingLoading] = useState(false);
+
+  async function fetchBriefing() {
+    if (briefingLoading) return;
+    setBriefingLoading(true);
+    try {
+      const d = await apiFetch("/api/ai/executive-briefing");
+      setBriefing(d.briefing);
+    } catch {
+      setBriefing("⚠️ AI service unreachable. Ensure backend is running on port 8000 with OPENAI_API_KEY set.");
+    }
+    setBriefingLoading(false);
+  }
+
   const topSuppliers = Object.values(SUPPLIERS)
     .map(s => {
       const parts = PART_RISK.filter(p => p.supplier === s.id);
@@ -371,8 +419,21 @@ function Dashboard({ go }) {
       <div className="rounded-xl p-5 flex gap-4" style={{ background: `linear-gradient(135deg, ${C.panel2}, ${C.panel})`, border: `1px solid ${C.accent}33` }}>
         <div className="rounded-lg p-2 h-fit" style={{ background: `${C.accent}1a` }}><Cpu size={18} style={{ color: C.accent }} /></div>
         <div className="flex-1">
-          <div className="text-xs uppercase tracking-widest mb-1 font-semibold" style={{ color: C.accent }}>AI Executive Summary</div>
-          <p className="text-sm leading-relaxed" style={{ color: C.text }}>{summary}</p>
+          <div className="flex items-center justify-between mb-1">
+            <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: C.accent }}>AI Executive Summary</div>
+            <button
+              onClick={fetchBriefing}
+              disabled={briefingLoading}
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-opacity"
+              style={{ background: `${C.accent}22`, color: C.accent, border: `1px solid ${C.accent}44`, opacity: briefingLoading ? 0.6 : 1 }}
+            >
+              {briefingLoading ? <Loader2 size={11} className="animate-spin" /> : <Sparkles size={11} />}
+              {briefingLoading ? "Generating…" : briefing ? "Regenerate GPT-4o" : "Generate GPT-4o Briefing"}
+            </button>
+          </div>
+          <p className="text-sm leading-relaxed" style={{ color: C.text }}>
+            {briefing || summary}
+          </p>
         </div>
       </div>
 
@@ -587,6 +648,38 @@ const Row = ({ k, v, tone }) => (
 function RiskDetail({ partId, go }) {
   const p = PART_RISK.find(x => x.id === partId) || PART_RISK[0];
   const s = SUPPLIERS[p.supplier];
+
+  const [aiAnalysis, setAiAnalysis]   = useState(null);
+  const [aiLoading, setAiLoading]     = useState(false);
+  const [aiExpanded, setAiExpanded]   = useState(false);
+  const [strategy, setStrategy]       = useState(null);
+  const [stratLoading, setStratLoading] = useState(false);
+
+  async function fetchDeepAnalysis() {
+    if (aiLoading) return;
+    setAiLoading(true);
+    setAiExpanded(true);
+    try {
+      const d = await apiFetch(`/api/ai/deep-analysis/${p.id}`, { method: "POST" });
+      setAiAnalysis(d.analysis);
+    } catch {
+      setAiAnalysis("⚠️ AI service unreachable. Ensure backend is running on port 8000 with OPENAI_API_KEY set.");
+    }
+    setAiLoading(false);
+  }
+
+  async function fetchStrategy() {
+    if (stratLoading) return;
+    setStratLoading(true);
+    try {
+      const d = await apiFetch(`/api/ai/procurement-strategy/${p.id}`, { method: "POST" });
+      setStrategy(d.strategy);
+    } catch {
+      setStrategy("⚠️ AI service unreachable.");
+    }
+    setStratLoading(false);
+  }
+
   const factorRows = [
     ["Supplier delay", p.factors.supplier_delay, 0.20],
     ["Country risk", p.factors.country, 0.15],
@@ -671,6 +764,65 @@ function RiskDetail({ partId, go }) {
             Korea MicroSystems (20%), and lift safety stock to 18 days.
           </p>
         </Panel>
+
+        {/* AI Deep Analysis */}
+        <div className="rounded-xl overflow-hidden" style={{ background: C.panel, border: `1px solid ${C.accent}33` }}>
+          <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: aiExpanded ? `1px solid ${C.border}` : "none" }}>
+            <div className="flex items-center gap-2">
+              <Brain size={14} style={{ color: C.accent }} />
+              <span className="text-sm font-semibold" style={{ color: C.text }}>GPT-4o Deep Risk Analysis</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button onClick={fetchDeepAnalysis} disabled={aiLoading}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
+                style={{ background: `${C.accent}22`, color: C.accent, border: `1px solid ${C.accent}44`, opacity: aiLoading ? 0.6 : 1 }}>
+                {aiLoading ? <Loader2 size={10} className="animate-spin" /> : <Sparkles size={10} />}
+                {aiLoading ? "Analysing…" : aiAnalysis ? "Re-run" : "Run Analysis"}
+              </button>
+              {aiAnalysis && (
+                <button onClick={() => setAiExpanded(x => !x)} style={{ color: C.faint }}>
+                  {aiExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                </button>
+              )}
+            </div>
+          </div>
+          {aiExpanded && (
+            <div className="p-4">
+              {aiLoading && !aiAnalysis ? (
+                <div className="flex items-center gap-2 text-sm" style={{ color: C.faint }}>
+                  <Loader2 size={14} className="animate-spin" />Generating deep analysis…
+                </div>
+              ) : (
+                <div className="text-sm leading-relaxed whitespace-pre-wrap" style={{ color: C.text }}>
+                  {aiAnalysis}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* 90-day Procurement Strategy */}
+        <div className="rounded-xl overflow-hidden" style={{ background: C.panel, border: `1px solid ${C.green}33` }}>
+          <div className="flex items-center justify-between px-4 py-3">
+            <div className="flex items-center gap-2">
+              <Sparkles size={14} style={{ color: C.green }} />
+              <span className="text-sm font-semibold" style={{ color: C.text }}>90-Day Procurement Playbook</span>
+            </div>
+            <button onClick={fetchStrategy} disabled={stratLoading}
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
+              style={{ background: `${C.green}18`, color: C.green, border: `1px solid ${C.green}44`, opacity: stratLoading ? 0.6 : 1 }}>
+              {stratLoading ? <Loader2 size={10} className="animate-spin" /> : <RefreshCw size={10} />}
+              {stratLoading ? "Generating…" : strategy ? "Regenerate" : "Generate Strategy"}
+            </button>
+          </div>
+          {strategy && (
+            <div className="px-4 pb-4">
+              <div className="text-sm leading-relaxed whitespace-pre-wrap" style={{ color: C.text, borderTop: `1px solid ${C.border}`, paddingTop: 12 }}>
+                {strategy}
+              </div>
+            </div>
+          )}
+        </div>
 
         <Panel title="Live Risk Signals">
           <div className="space-y-2">
@@ -871,6 +1023,21 @@ function Quality() {
   const dayDefects = WELD.filter(w => w.shift === "Day" && w.defect).length;
   const defectProb = 0.72;
 
+  const [rca, setRca]           = useState(null);
+  const [rcaLoading, setRcaLoading] = useState(false);
+
+  async function fetchRCA() {
+    if (rcaLoading) return;
+    setRcaLoading(true);
+    try {
+      const d = await apiFetch("/api/ai/quality-rca");
+      setRca(d.analysis);
+    } catch {
+      setRca("⚠️ AI service unreachable. Ensure backend is running on port 8000 with OPENAI_API_KEY set.");
+    }
+    setRcaLoading(false);
+  }
+
   return (
     <div className="p-6 grid grid-cols-3 gap-5">
       <div className="col-span-2 space-y-5">
@@ -946,7 +1113,7 @@ function Quality() {
         </Panel>
       </div>
 
-      <div>
+      <div className="space-y-5">
         <Panel title="Operator Action Checklist">
           <div className="space-y-2">
             {[
@@ -967,6 +1134,36 @@ function Quality() {
             <b style={{ color: C.accent }}>Copilot:</b> Recalibrating to 184A centers the process within spec and lifts projected Cpk back above 1.33, cutting defect probability from 72% to ~9%.
           </div>
         </Panel>
+
+        {/* AI Root Cause Analysis */}
+        <div className="rounded-xl overflow-hidden" style={{ background: C.panel, border: `1px solid ${C.red}44` }}>
+          <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: rca ? `1px solid ${C.border}` : "none" }}>
+            <div className="flex items-center gap-2">
+              <Brain size={14} style={{ color: C.red }} />
+              <span className="text-sm font-semibold" style={{ color: C.text }}>GPT-4o Root Cause Analysis</span>
+            </div>
+            <button
+              onClick={fetchRCA}
+              disabled={rcaLoading}
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
+              style={{ background: `${C.red}18`, color: C.red, border: `1px solid ${C.red}44`, opacity: rcaLoading ? 0.6 : 1 }}
+            >
+              {rcaLoading ? <Loader2 size={10} className="animate-spin" /> : <Sparkles size={10} />}
+              {rcaLoading ? "Analysing…" : rca ? "Re-run" : "Run Deep RCA"}
+            </button>
+          </div>
+          {rcaLoading && !rca && (
+            <div className="px-4 py-3 flex items-center gap-2 text-sm" style={{ color: C.faint }}>
+              <Loader2 size={13} className="animate-spin" />GPT-4o analysing welding anomaly…
+            </div>
+          )}
+          {rca && (
+            <div className="px-4 pb-4 pt-3 text-xs leading-relaxed whitespace-pre-wrap overflow-y-auto"
+              style={{ color: C.text, maxHeight: 380 }}>
+              {rca}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -1058,6 +1255,371 @@ function ERP() {
   );
 }
 
+/* ----------------------------- AI COPILOT --------------------------------- */
+
+const COPILOT_CHIPS = [
+  "What is the highest risk in my supply chain right now?",
+  "Why is ElectroChip Asia flagged as critical?",
+  "What should I do about the Infotainment MCU shortage?",
+  "Analyse the quality issue on Line 3 machine M007",
+  "Which suppliers can replace ElectroChip Asia?",
+  "Financial impact if Pune Line 2 stops for 5 days?",
+  "Should I place an emergency PO for the MCU today?",
+  "How exposed am I to China geopolitical risk?",
+];
+
+function AICopilot({ partCtx }) {
+  const [msgs, setMsgs] = useState([
+    {
+      role: "assistant",
+      content:
+        "I'm your AutoShield AI Copilot with real-time visibility into all supply chain risks, quality alerts, commodity signals, and inventory positions. Ask me anything about your operations — I'll give you specific, data-driven answers.",
+    },
+  ]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [msgs]);
+
+  const send = useCallback(
+    async (text) => {
+      if (!text.trim() || loading) return;
+      const userMsgs = [...msgs, { role: "user", content: text }];
+      setMsgs([...userMsgs, { role: "assistant", content: "" }]);
+      setInput("");
+      setLoading(true);
+
+      try {
+        const res = await fetch(`${API_BASE}/api/ai/chat`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            messages: userMsgs.map((m) => ({ role: m.role, content: m.content })),
+            part_context: partCtx || null,
+          }),
+        });
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let content = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const text = decoder.decode(value);
+          for (const line of text.split("\n")) {
+            if (!line.startsWith("data: ")) continue;
+            const d = line.slice(6);
+            if (d === "[DONE]") break;
+            try {
+              const parsed = JSON.parse(d);
+              if (parsed.content) {
+                content += parsed.content;
+                setMsgs([...userMsgs, { role: "assistant", content }]);
+              }
+            } catch { /* incomplete JSON chunk, skip */ }
+          }
+        }
+      } catch {
+        setMsgs([
+          ...userMsgs,
+          {
+            role: "assistant",
+            content:
+              "⚠️ Connection error — ensure the AutoShield backend is running on port 8000 with OPENAI_API_KEY set.",
+          },
+        ]);
+      }
+      setLoading(false);
+    },
+    [msgs, loading, partCtx]
+  );
+
+  const showChips = msgs.length <= 1;
+
+  return (
+    <div className="flex flex-col h-full">
+      {/* header strip */}
+      <div
+        className="flex items-center gap-3 px-6 py-3"
+        style={{ borderBottom: `1px solid ${C.border}`, background: `${C.accent}08` }}
+      >
+        <div className="rounded-lg p-1.5" style={{ background: `${C.accent}1a` }}>
+          <Bot size={16} style={{ color: C.accent }} />
+        </div>
+        <div>
+          <span className="text-sm font-semibold" style={{ color: C.text }}>
+            AutoShield AI Copilot
+          </span>
+          <span className="text-xs ml-2" style={{ color: C.faint }}>
+            GPT-4o · live supply chain context
+          </span>
+        </div>
+        <div
+          className="ml-auto flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs"
+          style={{ background: `${C.green}14`, color: C.green, border: `1px solid ${C.green}33` }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: C.green }} />
+          Online
+        </div>
+      </div>
+
+      {/* message list */}
+      <div className="flex-1 overflow-y-auto p-6 space-y-4">
+        {msgs.map((m, i) => (
+          <div key={i} className={`flex gap-3 ${m.role === "user" ? "justify-end" : ""}`}>
+            {m.role === "assistant" && (
+              <div
+                className="rounded-lg p-2 h-fit shrink-0"
+                style={{ background: `${C.accent}1a`, border: `1px solid ${C.accent}33` }}
+              >
+                <Sparkles size={14} style={{ color: C.accent }} />
+              </div>
+            )}
+            <div
+              className="max-w-2xl rounded-xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
+              style={{
+                background: m.role === "user" ? `${C.accent}18` : C.panel,
+                border: `1px solid ${m.role === "user" ? C.accent + "44" : C.border}`,
+                color: C.text,
+              }}
+            >
+              {m.content || (loading && i === msgs.length - 1 ? (
+                <span className="flex items-center gap-2" style={{ color: C.faint }}>
+                  <Loader2 size={13} className="animate-spin" />Thinking…
+                </span>
+              ) : "")}
+            </div>
+            {m.role === "user" && (
+              <div
+                className="rounded-lg p-2 h-fit shrink-0"
+                style={{ background: `${C.border}`, border: `1px solid ${C.border}` }}
+              >
+                <Brain size={14} style={{ color: C.dim }} />
+              </div>
+            )}
+          </div>
+        ))}
+        <div ref={bottomRef} />
+      </div>
+
+      {/* suggestion chips */}
+      {showChips && (
+        <div className="px-6 pb-3 flex flex-wrap gap-2">
+          {COPILOT_CHIPS.map((c) => (
+            <button
+              key={c}
+              onClick={() => send(c)}
+              className="px-3 py-1.5 rounded-full text-xs transition-colors hover:brightness-125"
+              style={{ background: C.panel, border: `1px solid ${C.border}`, color: C.dim }}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* input bar */}
+      <div className="px-6 pb-6">
+        <div
+          className="flex gap-2 p-2 rounded-xl"
+          style={{ background: C.panel, border: `1px solid ${C.border}` }}
+        >
+          <input
+            className="flex-1 bg-transparent text-sm outline-none px-2"
+            style={{ color: C.text }}
+            placeholder="Ask about supply chain risks, quality, sourcing strategy…"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && send(input)}
+          />
+          <button
+            onClick={() => send(input)}
+            disabled={loading || !input.trim()}
+            className="px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-opacity"
+            style={{
+              background: C.accent,
+              color: C.bg,
+              opacity: loading || !input.trim() ? 0.4 : 1,
+              cursor: loading || !input.trim() ? "not-allowed" : "pointer",
+            }}
+          >
+            {loading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+            {loading ? "…" : "Send"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* --------------------------- SCENARIO PLANNER ----------------------------- */
+
+const SCENARIO_LIST = [
+  {
+    id: "china_ban",
+    label: "China Semiconductor Export Ban",
+    severity: "Critical",
+    emoji: "🚫",
+    desc: "China bans all semiconductor material exports immediately",
+  },
+  {
+    id: "taiwan_crisis",
+    label: "Taiwan Strait Crisis",
+    severity: "Critical",
+    emoji: "⚡",
+    desc: "Military crisis — shipping lanes disrupted for 60 days, TSMC output cut 30%",
+  },
+  {
+    id: "aluminium_spike",
+    label: "Aluminium Price Spike +40%",
+    severity: "High",
+    emoji: "📈",
+    desc: "European smelter shutdowns from energy crisis spike aluminium 40% in 30 days",
+  },
+  {
+    id: "supplier_failure",
+    label: "ElectroChip Asia Bankruptcy",
+    severity: "Critical",
+    emoji: "🏢",
+    desc: "Primary MCU supplier (S001) files for bankruptcy — no new shipments, tooling locked",
+  },
+];
+
+function ScenarioPlanner() {
+  const [active, setActive] = useState(null);
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  async function runScenario(id) {
+    if (loading) return;
+    setActive(id);
+    setResult(null);
+    setLoading(true);
+    try {
+      const data = await apiFetch("/api/ai/scenario", {
+        method: "POST",
+        body: JSON.stringify({ scenario_type: id, parameters: {} }),
+      });
+      setResult(data);
+    } catch {
+      setResult({ error: "AI service unreachable. Ensure backend is running on port 8000 with OPENAI_API_KEY set." });
+    }
+    setLoading(false);
+  }
+
+  const activeScenario = SCENARIO_LIST.find((s) => s.id === active);
+
+  return (
+    <div className="p-6 flex gap-5 h-full">
+      {/* scenario selector */}
+      <div className="w-72 shrink-0 space-y-3">
+        <div
+          className="text-xs uppercase tracking-widest font-semibold mb-4"
+          style={{ color: C.accent }}
+        >
+          Select Scenario
+        </div>
+        {SCENARIO_LIST.map((s) => {
+          const isActive = active === s.id;
+          const lvl = riskLevel(s.severity === "Critical" ? 87 : 70);
+          return (
+            <button
+              key={s.id}
+              onClick={() => runScenario(s.id)}
+              disabled={loading}
+              className="w-full text-left rounded-xl p-4 transition-all hover:brightness-110"
+              style={{
+                background: isActive ? `${C.accent}14` : C.panel,
+                border: `1px solid ${isActive ? C.accent + "55" : C.border}`,
+                opacity: loading && !isActive ? 0.5 : 1,
+              }}
+            >
+              <div className="text-2xl mb-2">{s.emoji}</div>
+              <div className="text-sm font-semibold mb-1" style={{ color: C.text }}>
+                {s.label}
+              </div>
+              <div className="text-xs mb-2" style={{ color: C.faint }}>
+                {s.desc}
+              </div>
+              <Badge level={lvl} />
+            </button>
+          );
+        })}
+      </div>
+
+      {/* results area */}
+      <div className="flex-1">
+        {loading && (
+          <div
+            className="flex flex-col items-center justify-center h-full gap-4"
+            style={{ color: C.accent }}
+          >
+            <Loader2 size={32} className="animate-spin" />
+            <div className="text-sm font-medium">AI modelling scenario impact…</div>
+            <div className="text-xs" style={{ color: C.faint }}>
+              GPT-4o is analysing cascade effects across your full supply chain
+            </div>
+          </div>
+        )}
+
+        {result && !loading && (
+          <Panel
+            title={
+              result.error
+                ? "Error"
+                : `Scenario Analysis — ${activeScenario?.label}`
+            }
+            right={
+              !result.error && (
+                <button
+                  onClick={() => runScenario(active)}
+                  className="flex items-center gap-1 text-xs px-2 py-1 rounded"
+                  style={{ color: C.accent, background: `${C.accent}14` }}
+                >
+                  <RefreshCw size={11} />Re-run
+                </button>
+              )
+            }
+          >
+            {result.error ? (
+              <p className="text-sm" style={{ color: C.amber }}>
+                ⚠️ {result.error}
+              </p>
+            ) : (
+              <div
+                className="text-sm leading-relaxed whitespace-pre-wrap overflow-y-auto"
+                style={{ color: C.text, maxHeight: "calc(100vh - 220px)" }}
+              >
+                {result.analysis}
+              </div>
+            )}
+          </Panel>
+        )}
+
+        {!result && !loading && (
+          <div
+            className="flex flex-col items-center justify-center h-full gap-4"
+            style={{ color: C.faint }}
+          >
+            <FlaskConical size={48} strokeWidth={1} />
+            <div className="text-sm font-medium" style={{ color: C.dim }}>
+              AI-powered what-if scenario analysis
+            </div>
+            <div className="text-xs text-center max-w-xs">
+              Select a disruption scenario to see GPT-4o model the cascade effects, financial
+              exposure, and emergency response playbook across your entire supply chain.
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /* -------------------------------- SHELL ----------------------------------- */
 
 export default function App() {
@@ -1066,22 +1628,39 @@ export default function App() {
   const go = (pg, id) => { if (id) setCtx(id); setPage(pg); };
 
   const titles = {
-    dash: "Command Dashboard", graph: "Supply-Chain Digital Twin", risk: "Risk Detail",
-    sim: "Sourcing Simulator", qual: "Smart Manufacturing Quality Copilot", erp: "ERP Reorder Decision",
+    dash:     "Command Dashboard",
+    graph:    "Supply-Chain Digital Twin",
+    risk:     "Risk Detail",
+    sim:      "Sourcing Simulator",
+    qual:     "Smart Manufacturing Quality Copilot",
+    erp:      "ERP Reorder Decision",
+    copilot:  "AI Copilot  —  GPT-4o Supply Chain Intelligence",
+    scenario: "AI Scenario Planner  —  What-If Disruption Analysis",
   };
+
+  const isCopilotPage = page === "copilot" || page === "scenario";
 
   return (
     <div className="flex h-screen w-full font-sans" style={{ background: C.bg, color: C.text }}>
       <Sidebar page={page} setPage={setPage} />
       <main className="flex-1 flex flex-col overflow-hidden">
         <TopBar title={titles[page]} />
-        <div className="flex-1 overflow-y-auto" style={{ background: `radial-gradient(1200px 600px at 80% -10%, ${C.panel2}55, transparent)` }}>
-          {page === "dash" && <Dashboard go={go} />}
-          {page === "graph" && <GraphView go={go} />}
-          {page === "risk" && <RiskDetail partId={ctx} go={go} />}
-          {page === "sim" && <Simulator />}
-          {page === "qual" && <Quality />}
-          {page === "erp" && <ERP />}
+        <div
+          className="flex-1 overflow-y-auto"
+          style={{
+            background: `radial-gradient(1200px 600px at 80% -10%, ${C.panel2}55, transparent)`,
+            /* copilot pages need full height flex layout */
+            ...(isCopilotPage ? { display:"flex", flexDirection:"column", overflow:"hidden" } : {}),
+          }}
+        >
+          {page === "dash"     && <Dashboard go={go} />}
+          {page === "graph"    && <GraphView go={go} />}
+          {page === "risk"     && <RiskDetail partId={ctx} go={go} />}
+          {page === "sim"      && <Simulator />}
+          {page === "qual"     && <Quality />}
+          {page === "erp"      && <ERP />}
+          {page === "copilot"  && <AICopilot partCtx={null} />}
+          {page === "scenario" && <ScenarioPlanner />}
         </div>
       </main>
     </div>

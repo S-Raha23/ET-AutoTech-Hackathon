@@ -1,3 +1,353 @@
 date,title,category,country,commodity,risk_level,risk_score
-2026-06-02,Memory chip shortage warning affects automotive electronics,Semiconductor,Global,Semiconductor Memory,High,0.78
-2026-06-03,Port congestion increases shipment delay risk,Logistics,China,NA,Medium,0.55
+2025-10-01,Memory chip shortage warning hits automotive electronics,Semiconductor,Global,Semiconductor Memory,High,0.73
+2025-10-03,Taiwan fab capacity constrained amid geopolitical uncertainty,Semiconductor,Taiwan,Semiconductor Memory,High,0.83
+2025-10-05,Chinese chipmaker faces US export restrictions escalation,Semiconductor,China,Semiconductor Memory,High,0.77
+2025-10-07,Korean DRAM output reduced by 12% due to equipment shortage,Semiconductor,South Korea,Semiconductor Memory,Medium,0.59
+2025-10-09,Japanese wafer supplier flags capacity ceiling for 2026,Semiconductor,Japan,Silicon,Low,0.41
+2025-10-11,Silicon carbide supply falls short of EV inverter demand,Semiconductor,Global,Silicon,Medium,0.64
+2025-10-13,"US chip incentives attract new fab investments, lead times improve",Semiconductor,USA,Semiconductor Memory,Medium,0.46
+2025-10-15,Memory chip shortage warning hits automotive electronics — latest update,Semiconductor,Global,Semiconductor Memory,High,0.72
+2025-10-15,ADAS chip lead times extend to 52 weeks amid design complexity,Semiconductor,Global,Semiconductor Memory,High,0.76
+2025-10-17,Taiwan fab capacity constrained amid geopolitical uncertainty — latest update,Semiconductor,Taiwan,Semiconductor Memory,High,0.8
+2025-10-17,Shanghai port export restrictions impact chip shipments,Semiconductor,China,Semiconductor Memory,High,0.78
+2025-10-19,Chinese chipmaker faces US export restrictions escalation — latest update,Semiconductor,China,Semiconductor Memory,High,0.68
+2025-10-19,SiC wafer prices rise 22% as EV adoption accelerates,Semiconductor,Global,Silicon,Medium,0.64
+2025-10-21,Korean DRAM output reduced by 12% due to equipment shortage — latest update,Semiconductor,South Korea,Semiconductor Memory,Medium,0.55
+2025-10-21,Next-gen automotive ECU shortage delays production ramp,Semiconductor,Global,Semiconductor Memory,High,0.73
+2025-10-23,Japanese wafer supplier flags capacity ceiling for 2026 — latest update,Semiconductor,Japan,Silicon,Medium,0.56
+2025-10-23,"TSMC capacity allocation shifts towards AI, squeezing auto",Semiconductor,Taiwan,Silicon,High,0.67
+2025-10-25,Silicon carbide supply falls short of EV inverter demand — latest update,Semiconductor,Global,Silicon,Medium,0.59
+2025-10-25,Port congestion at Shanghai increases automotive shipment delays,Logistics,China,NA,Medium,0.49
+2025-10-27,"US chip incentives attract new fab investments, lead times improve — latest update",Semiconductor,USA,Semiconductor Memory,Low,0.39
+2025-10-27,Red Sea rerouting adds 12 days to Europe-Asia automotive shipments,Logistics,Global,NA,Medium,0.54
+2025-10-29,Memory chip shortage warning hits automotive electronics — analysts weigh in,Semiconductor,Global,Semiconductor Memory,High,0.83
+2025-10-29,ADAS chip lead times extend to 52 weeks amid design complexity — latest update,Semiconductor,Global,Semiconductor Memory,Medium,0.62
+2025-10-29,JNPT port upgrades reduce Chennai-bound delays by 15%,Logistics,India,NA,Low,0.31
+2025-10-31,Taiwan fab capacity constrained amid geopolitical uncertainty — analysts weigh in,Semiconductor,Taiwan,Semiconductor Memory,High,0.87
+2025-10-31,Shanghai port export restrictions impact chip shipments — latest update,Semiconductor,China,Semiconductor Memory,High,0.8
+2025-10-31,Ho Chi Minh City port congestion disrupts connector exports,Logistics,Vietnam,NA,Medium,0.56
+2025-11-02,Chinese chipmaker faces US export restrictions escalation — analysts weigh in,Semiconductor,China,Semiconductor Memory,High,0.72
+2025-11-02,SiC wafer prices rise 22% as EV adoption accelerates — latest update,Semiconductor,Global,Silicon,Medium,0.63
+2025-11-02,Rhine water levels delay European automotive supply chain,Logistics,Germany,NA,Low,0.37
+2025-11-04,Korean DRAM output reduced by 12% due to equipment shortage — analysts weigh in,Semiconductor,South Korea,Semiconductor Memory,Medium,0.59
+2025-11-04,Next-gen automotive ECU shortage delays production ramp — latest update,Semiconductor,Global,Semiconductor Memory,High,0.72
+2025-11-04,Global container shortage drives 40% freight rate increase,Logistics,Global,NA,High,0.66
+2025-11-06,Japanese wafer supplier flags capacity ceiling for 2026 — analysts weigh in,Semiconductor,Japan,Silicon,Medium,0.5
+2025-11-06,"TSMC capacity allocation shifts towards AI, squeezing auto — latest update",Semiconductor,Taiwan,Silicon,High,0.66
+2025-11-06,Suez Canal alternative routes add cost to Chinese supplier deliveries,Logistics,China,NA,Medium,0.6
+2025-11-08,Silicon carbide supply falls short of EV inverter demand — analysts weigh in,Semiconductor,Global,Silicon,High,0.67
+2025-11-08,Port congestion at Shanghai increases automotive shipment delays — latest update,Logistics,China,NA,Medium,0.58
+2025-11-08,Nagoya port strike threatens automotive parts exports,Logistics,Japan,NA,Low,0.44
+2025-11-10,"US chip incentives attract new fab investments, lead times improve — analysts weigh in",Semiconductor,USA,Semiconductor Memory,Medium,0.51
+2025-11-10,Red Sea rerouting adds 12 days to Europe-Asia automotive shipments — latest update,Logistics,Global,NA,Medium,0.5
+2025-11-10,West Coast port modernisation improves Americas parts flow,Logistics,USA,NA,Low,0.37
+2025-11-12,Memory chip shortage warning hits automotive electronics — industry reaction,Semiconductor,Global,Semiconductor Memory,High,0.7
+2025-11-12,ADAS chip lead times extend to 52 weeks amid design complexity — analysts weigh in,Semiconductor,Global,Semiconductor Memory,Medium,0.63
+2025-11-12,JNPT port upgrades reduce Chennai-bound delays by 15% — latest update,Logistics,India,NA,Low,0.4
+2025-11-12,Mumbai-Pune road corridor congestion hits just-in-time deliveries,Logistics,India,NA,Medium,0.46
+2025-11-14,Taiwan fab capacity constrained amid geopolitical uncertainty — industry reaction,Semiconductor,Taiwan,Semiconductor Memory,High,0.83
+2025-11-14,Shanghai port export restrictions impact chip shipments — analysts weigh in,Semiconductor,China,Semiconductor Memory,High,0.86
+2025-11-14,Ho Chi Minh City port congestion disrupts connector exports — latest update,Logistics,Vietnam,NA,Medium,0.51
+2025-11-14,Rail freight disruption across Central Asia affects EV component flow,Logistics,Global,NA,Medium,0.49
+2025-11-16,Chinese chipmaker faces US export restrictions escalation — industry reaction,Semiconductor,China,Semiconductor Memory,High,0.83
+2025-11-16,SiC wafer prices rise 22% as EV adoption accelerates — analysts weigh in,Semiconductor,Global,Silicon,Medium,0.63
+2025-11-16,Rhine water levels delay European automotive supply chain — latest update,Logistics,Germany,NA,Low,0.32
+2025-11-16,Baltic port capacity constraints hit Nordic supplier deliveries,Logistics,Europe,NA,Low,0.42
+2025-11-18,Korean DRAM output reduced by 12% due to equipment shortage — industry reaction,Semiconductor,South Korea,Semiconductor Memory,Medium,0.6
+2025-11-18,Next-gen automotive ECU shortage delays production ramp — analysts weigh in,Semiconductor,Global,Semiconductor Memory,High,0.65
+2025-11-18,Global container shortage drives 40% freight rate increase — latest update,Logistics,Global,NA,Medium,0.64
+2025-11-18,Aluminium price volatility impacts EV component sourcing,Commodity,Global,Aluminium,Low,0.43
+2025-11-20,Japanese wafer supplier flags capacity ceiling for 2026 — industry reaction,Semiconductor,Japan,Silicon,Medium,0.47
+2025-11-20,"TSMC capacity allocation shifts towards AI, squeezing auto — analysts weigh in",Semiconductor,Taiwan,Silicon,Medium,0.61
+2025-11-20,Suez Canal alternative routes add cost to Chinese supplier deliveries — latest update,Logistics,China,NA,High,0.66
+2025-11-20,Copper hits 18-month high on electric vehicle demand surge,Commodity,Global,Copper,Medium,0.52
+2025-11-22,Silicon carbide supply falls short of EV inverter demand — industry reaction,Semiconductor,Global,Silicon,High,0.65
+2025-11-22,Port congestion at Shanghai increases automotive shipment delays — analysts weigh in,Logistics,China,NA,Medium,0.59
+2025-11-22,Nagoya port strike threatens automotive parts exports — latest update,Logistics,Japan,NA,Low,0.39
+2025-11-22,Lithium carbonate price spikes 35% on battery demand,Commodity,Global,Lithium,High,0.66
+2025-11-24,"US chip incentives attract new fab investments, lead times improve — industry reaction",Semiconductor,USA,Semiconductor Memory,Low,0.43
+2025-11-24,Red Sea rerouting adds 12 days to Europe-Asia automotive shipments — analysts weigh in,Logistics,Global,NA,Medium,0.54
+2025-11-24,West Coast port modernisation improves Americas parts flow — latest update,Logistics,USA,NA,Low,0.39
+2025-11-24,"New Australian lithium mines come online, easing 2027 supply",Commodity,Australia,Lithium,Low,0.36
+2025-11-26,ADAS chip lead times extend to 52 weeks amid design complexity — industry reaction,Semiconductor,Global,Semiconductor Memory,Medium,0.63
+2025-11-26,JNPT port upgrades reduce Chennai-bound delays by 15% — analysts weigh in,Logistics,India,NA,Low,0.39
+2025-11-26,Mumbai-Pune road corridor congestion hits just-in-time deliveries — latest update,Logistics,India,NA,Low,0.42
+2025-11-26,Nickel market tightens as Indonesia export quota shrinks,Commodity,Global,Nickel,Medium,0.64
+2025-11-28,Shanghai port export restrictions impact chip shipments — industry reaction,Semiconductor,China,Semiconductor Memory,High,0.81
+2025-11-28,Ho Chi Minh City port congestion disrupts connector exports — analysts weigh in,Logistics,Vietnam,NA,Medium,0.54
+2025-11-28,Rail freight disruption across Central Asia affects EV component flow — latest update,Logistics,Global,NA,Medium,0.47
+2025-11-28,China restricts rare earth export quotas by 20%,Commodity,China,Rare Earth Elements,High,0.85
+2025-11-30,SiC wafer prices rise 22% as EV adoption accelerates — industry reaction,Semiconductor,Global,Silicon,Medium,0.53
+2025-11-30,Rhine water levels delay European automotive supply chain — analysts weigh in,Logistics,Germany,NA,Low,0.42
+2025-11-30,Baltic port capacity constraints hit Nordic supplier deliveries — latest update,Logistics,Europe,NA,Low,0.36
+2025-11-30,NdFeB magnet supply critical for EV motor production,Commodity,Global,Rare Earth Elements,High,0.89
+2025-12-02,Next-gen automotive ECU shortage delays production ramp — industry reaction,Semiconductor,Global,Semiconductor Memory,High,0.68
+2025-12-02,Global container shortage drives 40% freight rate increase — analysts weigh in,Logistics,Global,NA,Medium,0.58
+2025-12-02,Aluminium price volatility impacts EV component sourcing — latest update,Commodity,Global,Aluminium,Medium,0.47
+2025-12-02,Cobalt shortage looms as DRC output disrupted,Commodity,Global,Cobalt,High,0.67
+2025-12-04,"TSMC capacity allocation shifts towards AI, squeezing auto — industry reaction",Semiconductor,Taiwan,Silicon,High,0.73
+2025-12-04,Suez Canal alternative routes add cost to Chinese supplier deliveries — analysts weigh in,Logistics,China,NA,High,0.67
+2025-12-04,Copper hits 18-month high on electric vehicle demand surge — latest update,Commodity,Global,Copper,Medium,0.52
+2025-12-04,Steel prices stabilise after five-month correction,Commodity,Global,Steel,Low,0.43
+2025-12-06,Port congestion at Shanghai increases automotive shipment delays — industry reaction,Logistics,China,NA,Medium,0.57
+2025-12-06,Nagoya port strike threatens automotive parts exports — analysts weigh in,Logistics,Japan,NA,Medium,0.45
+2025-12-06,Lithium carbonate price spikes 35% on battery demand — latest update,Commodity,Global,Lithium,High,0.81
+2025-12-06,Palladium supply improves as Russian exports resume,Commodity,Global,Palladium,Low,0.28
+2025-12-08,Red Sea rerouting adds 12 days to Europe-Asia automotive shipments — industry reaction,Logistics,Global,NA,Low,0.41
+2025-12-08,West Coast port modernisation improves Americas parts flow — analysts weigh in,Logistics,USA,NA,Low,0.25
+2025-12-08,"New Australian lithium mines come online, easing 2027 supply — latest update",Commodity,Australia,Lithium,Low,0.39
+2025-12-08,Platinum recovers on hydrogen fuel cell demand outlook,Commodity,Global,Platinum,Low,0.28
+2025-12-10,JNPT port upgrades reduce Chennai-bound delays by 15% — industry reaction,Logistics,India,NA,Low,0.4
+2025-12-10,Mumbai-Pune road corridor congestion hits just-in-time deliveries — analysts weigh in,Logistics,India,NA,Low,0.44
+2025-12-10,Nickel market tightens as Indonesia export quota shrinks — latest update,Commodity,Global,Nickel,Medium,0.6
+2025-12-10,Chinese magnesium output cuts threaten auto lightweighting,Commodity,Global,Magnesium,Low,0.44
+2025-12-12,Ho Chi Minh City port congestion disrupts connector exports — industry reaction,Logistics,Vietnam,NA,Medium,0.52
+2025-12-12,Rail freight disruption across Central Asia affects EV component flow — analysts weigh in,Logistics,Global,NA,Medium,0.5
+2025-12-12,China restricts rare earth export quotas by 20% — latest update,Commodity,China,Rare Earth Elements,High,0.78
+2025-12-12,Carbon fibre supply tight for performance vehicle programmes,Commodity,Global,Carbon Fibre,Low,0.33
+2025-12-14,Rhine water levels delay European automotive supply chain — industry reaction,Logistics,Germany,NA,Low,0.35
+2025-12-14,Baltic port capacity constraints hit Nordic supplier deliveries — analysts weigh in,Logistics,Europe,NA,Medium,0.46
+2025-12-14,NdFeB magnet supply critical for EV motor production — latest update,Commodity,Global,Rare Earth Elements,High,0.83
+2025-12-14,Polysilicon shortage spills into SiC wafer supply chain,Commodity,Global,Silicon,Medium,0.55
+2025-12-16,Global container shortage drives 40% freight rate increase — industry reaction,Logistics,Global,NA,Medium,0.54
+2025-12-16,Aluminium price volatility impacts EV component sourcing — analysts weigh in,Commodity,Global,Aluminium,Low,0.43
+2025-12-16,Cobalt shortage looms as DRC output disrupted — latest update,Commodity,Global,Cobalt,High,0.73
+2025-12-16,"Chilean lithium brine output rises, easing battery raw material costs",Commodity,Chile,Lithium,Medium,0.46
+2025-12-18,Suez Canal alternative routes add cost to Chinese supplier deliveries — industry reaction,Logistics,China,NA,Medium,0.62
+2025-12-18,Copper hits 18-month high on electric vehicle demand surge — analysts weigh in,Commodity,Global,Copper,Medium,0.52
+2025-12-18,Steel prices stabilise after five-month correction — latest update,Commodity,Global,Steel,Low,0.35
+2025-12-18,Copper mine strikes in Peru drive spot price to record,Commodity,Global,Copper,High,0.65
+2025-12-20,Nagoya port strike threatens automotive parts exports — industry reaction,Logistics,Japan,NA,Medium,0.46
+2025-12-20,Lithium carbonate price spikes 35% on battery demand — analysts weigh in,Commodity,Global,Lithium,High,0.74
+2025-12-20,Palladium supply improves as Russian exports resume — latest update,Commodity,Global,Palladium,Low,0.42
+2025-12-20,Battery gigafactory ramp drives cobalt demand beyond forecasts,Commodity,Global,Cobalt,High,0.7
+2025-12-22,West Coast port modernisation improves Americas parts flow — industry reaction,Logistics,USA,NA,Low,0.29
+2025-12-22,"New Australian lithium mines come online, easing 2027 supply — analysts weigh in",Commodity,Australia,Lithium,Low,0.34
+2025-12-22,Platinum recovers on hydrogen fuel cell demand outlook — latest update,Commodity,Global,Platinum,Low,0.38
+2025-12-22,US-China tech decoupling accelerates semiconductor supply risk,Geopolitical,China,NA,High,0.83
+2025-12-24,Mumbai-Pune road corridor congestion hits just-in-time deliveries — industry reaction,Logistics,India,NA,Low,0.41
+2025-12-24,Nickel market tightens as Indonesia export quota shrinks — analysts weigh in,Commodity,Global,Nickel,Medium,0.58
+2025-12-24,Chinese magnesium output cuts threaten auto lightweighting — latest update,Commodity,Global,Magnesium,Low,0.44
+2025-12-24,Taiwan Strait tensions raise shipping insurance premiums 30%,Geopolitical,Taiwan,NA,High,0.8
+2025-12-26,Rail freight disruption across Central Asia affects EV component flow — industry reaction,Logistics,Global,NA,Medium,0.51
+2025-12-26,China restricts rare earth export quotas by 20% — analysts weigh in,Commodity,China,Rare Earth Elements,High,0.85
+2025-12-26,Carbon fibre supply tight for performance vehicle programmes — latest update,Commodity,Global,Carbon Fibre,Low,0.36
+2025-12-26,Russian palladium export ban risk lifts auto catalyst prices,Geopolitical,Russia,NA,High,0.65
+2025-12-28,Baltic port capacity constraints hit Nordic supplier deliveries — industry reaction,Logistics,Europe,NA,Low,0.35
+2025-12-28,NdFeB magnet supply critical for EV motor production — analysts weigh in,Commodity,Global,Rare Earth Elements,High,0.83
+2025-12-28,Polysilicon shortage spills into SiC wafer supply chain — latest update,Commodity,Global,Silicon,Medium,0.52
+2025-12-28,Gulf tensions disrupt oil prices and freight rates,Geopolitical,Middle East,NA,Medium,0.53
+2025-12-30,Aluminium price volatility impacts EV component sourcing — industry reaction,Commodity,Global,Aluminium,Medium,0.5
+2025-12-30,Cobalt shortage looms as DRC output disrupted — analysts weigh in,Commodity,Global,Cobalt,High,0.65
+2025-12-30,"Chilean lithium brine output rises, easing battery raw material costs — latest update",Commodity,Chile,Lithium,Low,0.42
+2025-12-30,India-China border easing improves rare earth import outlook,Geopolitical,India,NA,Low,0.25
+2026-01-01,Copper hits 18-month high on electric vehicle demand surge — industry reaction,Commodity,Global,Copper,Medium,0.49
+2026-01-01,Steel prices stabilise after five-month correction — analysts weigh in,Commodity,Global,Steel,Medium,0.47
+2026-01-01,Copper mine strikes in Peru drive spot price to record — latest update,Commodity,Global,Copper,Medium,0.61
+2026-01-01,EU sanctions on Belarus affect wire harness raw material flow,Geopolitical,Europe,NA,Low,0.42
+2026-01-03,Lithium carbonate price spikes 35% on battery demand — industry reaction,Commodity,Global,Lithium,High,0.81
+2026-01-03,Palladium supply improves as Russian exports resume — analysts weigh in,Commodity,Global,Palladium,Low,0.32
+2026-01-03,Battery gigafactory ramp drives cobalt demand beyond forecasts — latest update,Commodity,Global,Cobalt,Medium,0.63
+2026-01-03,Korea-Japan trade relations improve semiconductor cooperation,Geopolitical,South Korea,NA,Low,0.38
+2026-01-05,"New Australian lithium mines come online, easing 2027 supply — industry reaction",Commodity,Australia,Lithium,Low,0.41
+2026-01-05,Platinum recovers on hydrogen fuel cell demand outlook — analysts weigh in,Commodity,Global,Platinum,Low,0.35
+2026-01-05,US-China tech decoupling accelerates semiconductor supply risk — latest update,Geopolitical,China,NA,High,0.87
+2026-01-05,Vietnam trade agreement boosts electronics export stability,Geopolitical,Vietnam,NA,Low,0.35
+2026-01-07,Nickel market tightens as Indonesia export quota shrinks — industry reaction,Commodity,Global,Nickel,Medium,0.59
+2026-01-07,Chinese magnesium output cuts threaten auto lightweighting — analysts weigh in,Commodity,Global,Magnesium,Low,0.37
+2026-01-07,Taiwan Strait tensions raise shipping insurance premiums 30% — latest update,Geopolitical,Taiwan,NA,High,0.88
+2026-01-07,Escalating tariff threats trigger OEM supply chain diversification,Geopolitical,Global,NA,Medium,0.5
+2026-01-09,China restricts rare earth export quotas by 20% — industry reaction,Commodity,China,Rare Earth Elements,High,0.83
+2026-01-09,Carbon fibre supply tight for performance vehicle programmes — analysts weigh in,Commodity,Global,Carbon Fibre,Low,0.35
+2026-01-09,Russian palladium export ban risk lifts auto catalyst prices — latest update,Geopolitical,Russia,NA,Medium,0.62
+2026-01-09,Cross-strait military exercises disrupt Kaohsiung port operations,Geopolitical,Taiwan,NA,High,0.73
+2026-01-11,NdFeB magnet supply critical for EV motor production — industry reaction,Commodity,Global,Rare Earth Elements,High,0.86
+2026-01-11,Polysilicon shortage spills into SiC wafer supply chain — analysts weigh in,Commodity,Global,Silicon,Medium,0.57
+2026-01-11,Gulf tensions disrupt oil prices and freight rates — latest update,Geopolitical,Middle East,NA,Medium,0.6
+2026-01-11,PLI scheme boosts domestic semiconductor component production,Policy,India,NA,Low,0.38
+2026-01-13,Cobalt shortage looms as DRC output disrupted — industry reaction,Commodity,Global,Cobalt,High,0.72
+2026-01-13,"Chilean lithium brine output rises, easing battery raw material costs — analysts weigh in",Commodity,Chile,Lithium,Low,0.35
+2026-01-13,India-China border easing improves rare earth import outlook — latest update,Geopolitical,India,NA,Low,0.25
+2026-01-13,India EV battery localisation policy accelerates cell sourcing,Policy,India,Lithium,Low,0.38
+2026-01-15,Steel prices stabilise after five-month correction — industry reaction,Commodity,Global,Steel,Low,0.42
+2026-01-15,Copper mine strikes in Peru drive spot price to record — analysts weigh in,Commodity,Global,Copper,Medium,0.63
+2026-01-15,EU sanctions on Belarus affect wire harness raw material flow — latest update,Geopolitical,Europe,NA,Low,0.4
+2026-01-15,EU battery passport regulation raises compliance cost for OEMs,Policy,EU,NA,Low,0.43
+2026-01-17,Palladium supply improves as Russian exports resume — industry reaction,Commodity,Global,Palladium,Low,0.39
+2026-01-17,Battery gigafactory ramp drives cobalt demand beyond forecasts — analysts weigh in,Commodity,Global,Cobalt,High,0.68
+2026-01-17,Korea-Japan trade relations improve semiconductor cooperation — latest update,Geopolitical,South Korea,NA,Low,0.34
+2026-01-17,CHIPS Act funding accelerates US fab capacity,Policy,USA,Semiconductor Memory,Low,0.35
+2026-01-19,Platinum recovers on hydrogen fuel cell demand outlook — industry reaction,Commodity,Global,Platinum,Low,0.26
+2026-01-19,US-China tech decoupling accelerates semiconductor supply risk — analysts weigh in,Geopolitical,China,NA,High,0.86
+2026-01-19,Vietnam trade agreement boosts electronics export stability — latest update,Geopolitical,Vietnam,NA,Low,0.33
+2026-01-19,Beijing tightens control over rare earth processing,Policy,China,Rare Earth Elements,High,0.75
+2026-01-21,Chinese magnesium output cuts threaten auto lightweighting — industry reaction,Commodity,Global,Magnesium,Low,0.38
+2026-01-21,Taiwan Strait tensions raise shipping insurance premiums 30% — analysts weigh in,Geopolitical,Taiwan,NA,High,0.95
+2026-01-21,Escalating tariff threats trigger OEM supply chain diversification — latest update,Geopolitical,Global,NA,Medium,0.52
+2026-01-21,Carbon border adjustment mechanism impacts imported components,Policy,Global,NA,Low,0.39
+2026-01-23,Carbon fibre supply tight for performance vehicle programmes — industry reaction,Commodity,Global,Carbon Fibre,Low,0.38
+2026-01-23,Russian palladium export ban risk lifts auto catalyst prices — analysts weigh in,Geopolitical,Russia,NA,High,0.65
+2026-01-23,Cross-strait military exercises disrupt Kaohsiung port operations — latest update,Geopolitical,Taiwan,NA,High,0.71
+2026-01-23,FAME III subsidies drive domestic EV demand surge,Policy,India,NA,Low,0.38
+2026-01-25,Polysilicon shortage spills into SiC wafer supply chain — industry reaction,Commodity,Global,Silicon,Medium,0.5
+2026-01-25,Gulf tensions disrupt oil prices and freight rates — analysts weigh in,Geopolitical,Middle East,NA,Medium,0.6
+2026-01-25,PLI scheme boosts domestic semiconductor component production — latest update,Policy,India,NA,Low,0.44
+2026-01-25,New EU EV mandate accelerates battery localisation in Europe,Policy,EU,NA,Medium,0.47
+2026-01-27,"Chilean lithium brine output rises, easing battery raw material costs — industry reaction",Commodity,Chile,Lithium,Low,0.35
+2026-01-27,India-China border easing improves rare earth import outlook — analysts weigh in,Geopolitical,India,NA,Low,0.25
+2026-01-27,India EV battery localisation policy accelerates cell sourcing — latest update,Policy,India,Lithium,Low,0.37
+2026-01-27,Chinese tier-2 supplier quality audit reveals systemic gaps,Quality,China,NA,Medium,0.58
+2026-01-29,Copper mine strikes in Peru drive spot price to record — industry reaction,Commodity,Global,Copper,Medium,0.57
+2026-01-29,EU sanctions on Belarus affect wire harness raw material flow — analysts weigh in,Geopolitical,Europe,NA,Medium,0.45
+2026-01-29,EU battery passport regulation raises compliance cost for OEMs — latest update,Policy,EU,NA,Low,0.38
+2026-01-29,IATF 16949 recertification improves Indian supplier defect rates,Quality,India,NA,Low,0.38
+2026-01-31,Battery gigafactory ramp drives cobalt demand beyond forecasts — industry reaction,Commodity,Global,Cobalt,High,0.73
+2026-01-31,Korea-Japan trade relations improve semiconductor cooperation — analysts weigh in,Geopolitical,South Korea,NA,Low,0.39
+2026-01-31,CHIPS Act funding accelerates US fab capacity — latest update,Policy,USA,Semiconductor Memory,Low,0.33
+2026-01-31,Connector defect spike traced to Vietnam supplier batch V2234,Quality,Vietnam,NA,Medium,0.45
+2026-02-02,US-China tech decoupling accelerates semiconductor supply risk — industry reaction,Geopolitical,China,NA,High,0.85
+2026-02-02,Vietnam trade agreement boosts electronics export stability — analysts weigh in,Geopolitical,Vietnam,NA,Low,0.25
+2026-02-02,Beijing tightens control over rare earth processing — latest update,Policy,China,Rare Earth Elements,High,0.84
+2026-02-02,Welding process variation flagged across 3 EV battery plants,Quality,Global,NA,Low,0.4
+2026-02-04,Taiwan Strait tensions raise shipping insurance premiums 30% — industry reaction,Geopolitical,Taiwan,NA,High,0.93
+2026-02-04,Escalating tariff threats trigger OEM supply chain diversification — analysts weigh in,Geopolitical,Global,NA,Medium,0.58
+2026-02-04,Carbon border adjustment mechanism impacts imported components — latest update,Policy,Global,NA,Medium,0.48
+2026-02-04,Korean chipmaker achieves 6-sigma quality milestone,Quality,South Korea,NA,Low,0.25
+2026-02-06,Russian palladium export ban risk lifts auto catalyst prices — industry reaction,Geopolitical,Russia,NA,Medium,0.62
+2026-02-06,Cross-strait military exercises disrupt Kaohsiung port operations — analysts weigh in,Geopolitical,Taiwan,NA,High,0.83
+2026-02-06,FAME III subsidies drive domestic EV demand surge — latest update,Policy,India,NA,Low,0.4
+2026-02-06,Mexican tier-1 harness supplier issues voluntary recall notice,Quality,Mexico,NA,Medium,0.54
+2026-02-08,Gulf tensions disrupt oil prices and freight rates — industry reaction,Geopolitical,Middle East,NA,Medium,0.63
+2026-02-08,PLI scheme boosts domestic semiconductor component production — analysts weigh in,Policy,India,NA,Low,0.44
+2026-02-08,New EU EV mandate accelerates battery localisation in Europe — latest update,Policy,EU,NA,Medium,0.53
+2026-02-08,USD strengthening increases EM supplier invoice costs,Financial,Global,NA,Medium,0.48
+2026-02-10,India-China border easing improves rare earth import outlook — industry reaction,Geopolitical,India,NA,Low,0.29
+2026-02-10,India EV battery localisation policy accelerates cell sourcing — analysts weigh in,Policy,India,Lithium,Low,0.3
+2026-02-10,Chinese tier-2 supplier quality audit reveals systemic gaps — latest update,Quality,China,NA,Medium,0.62
+2026-02-10,Turkish lira volatility disrupts harness supplier payment terms,Financial,Turkey,NA,Medium,0.64
+2026-02-12,EU sanctions on Belarus affect wire harness raw material flow — industry reaction,Geopolitical,Europe,NA,Low,0.42
+2026-02-12,EU battery passport regulation raises compliance cost for OEMs — analysts weigh in,Policy,EU,NA,Medium,0.5
+2026-02-12,IATF 16949 recertification improves Indian supplier defect rates — latest update,Quality,India,NA,Low,0.34
+2026-02-12,Brazilian real depreciation inflates South American component costs,Financial,Brazil,NA,Medium,0.56
+2026-02-14,Korea-Japan trade relations improve semiconductor cooperation — industry reaction,Geopolitical,South Korea,NA,Low,0.42
+2026-02-14,CHIPS Act funding accelerates US fab capacity — analysts weigh in,Policy,USA,Semiconductor Memory,Low,0.41
+2026-02-14,Connector defect spike traced to Vietnam supplier batch V2234 — latest update,Quality,Vietnam,NA,Low,0.4
+2026-02-14,RBI rate cut improves Indian supplier working capital position,Financial,India,NA,Low,0.25
+2026-02-16,Vietnam trade agreement boosts electronics export stability — industry reaction,Geopolitical,Vietnam,NA,Low,0.25
+2026-02-16,Beijing tightens control over rare earth processing — analysts weigh in,Policy,China,Rare Earth Elements,High,0.82
+2026-02-16,Welding process variation flagged across 3 EV battery plants — latest update,Quality,Global,NA,Low,0.31
+2026-02-16,Chinese supplier credit tightening raises payment default risk,Financial,China,NA,Medium,0.59
+2026-02-18,Escalating tariff threats trigger OEM supply chain diversification — industry reaction,Geopolitical,Global,NA,Medium,0.55
+2026-02-18,Carbon border adjustment mechanism impacts imported components — analysts weigh in,Policy,Global,NA,Low,0.43
+2026-02-18,Korean chipmaker achieves 6-sigma quality milestone — latest update,Quality,South Korea,NA,Low,0.33
+2026-02-18,Rising interest rates strain mid-tier supplier balance sheets,Financial,Global,NA,Medium,0.51
+2026-02-20,Cross-strait military exercises disrupt Kaohsiung port operations — industry reaction,Geopolitical,Taiwan,NA,High,0.73
+2026-02-20,FAME III subsidies drive domestic EV demand surge — analysts weigh in,Policy,India,NA,Low,0.38
+2026-02-20,Mexican tier-1 harness supplier issues voluntary recall notice — latest update,Quality,Mexico,NA,Medium,0.46
+2026-02-20,German IG Metall strike threatens European auto parts output,Labour,Germany,NA,Low,0.42
+2026-02-22,PLI scheme boosts domestic semiconductor component production — industry reaction,Policy,India,NA,Low,0.42
+2026-02-22,New EU EV mandate accelerates battery localisation in Europe — analysts weigh in,Policy,EU,NA,Medium,0.48
+2026-02-22,USD strengthening increases EM supplier invoice costs — latest update,Financial,Global,NA,Low,0.43
+2026-02-22,Pune industrial belt labour shortage affects Tier-2 production,Labour,India,NA,Low,0.42
+2026-02-24,India EV battery localisation policy accelerates cell sourcing — industry reaction,Policy,India,Lithium,Low,0.31
+2026-02-24,Chinese tier-2 supplier quality audit reveals systemic gaps — analysts weigh in,Quality,China,NA,Medium,0.57
+2026-02-24,Turkish lira volatility disrupts harness supplier payment terms — latest update,Financial,Turkey,NA,High,0.69
+2026-02-24,Nuevo Leon wage hike squeezes Mexican maquiladora margins,Labour,Mexico,NA,Medium,0.53
+2026-02-26,EU battery passport regulation raises compliance cost for OEMs — industry reaction,Policy,EU,NA,Low,0.39
+2026-02-26,IATF 16949 recertification improves Indian supplier defect rates — analysts weigh in,Quality,India,NA,Low,0.25
+2026-02-26,Brazilian real depreciation inflates South American component costs — latest update,Financial,Brazil,NA,Medium,0.59
+2026-02-26,Post-CNY worker shortage delays Chinese supplier restart,Labour,China,NA,Low,0.34
+2026-02-28,CHIPS Act funding accelerates US fab capacity — industry reaction,Policy,USA,Semiconductor Memory,Low,0.35
+2026-02-28,Connector defect spike traced to Vietnam supplier batch V2234 — analysts weigh in,Quality,Vietnam,NA,Medium,0.47
+2026-02-28,RBI rate cut improves Indian supplier working capital position — latest update,Financial,India,NA,Low,0.34
+2026-02-28,Korean automotive union demands 15% wage increase for 2026,Labour,South Korea,NA,Low,0.36
+2026-03-02,Beijing tightens control over rare earth processing — industry reaction,Policy,China,Rare Earth Elements,High,0.73
+2026-03-02,Welding process variation flagged across 3 EV battery plants — analysts weigh in,Quality,Global,NA,Low,0.37
+2026-03-02,Chinese supplier credit tightening raises payment default risk — latest update,Financial,China,NA,Medium,0.49
+2026-03-02,Extreme heat disrupts outdoor logistics across South Asia,Climate,Global,NA,Low,0.39
+2026-03-04,Carbon border adjustment mechanism impacts imported components — industry reaction,Policy,Global,NA,Medium,0.53
+2026-03-04,Korean chipmaker achieves 6-sigma quality milestone — analysts weigh in,Quality,South Korea,NA,Low,0.25
+2026-03-04,Rising interest rates strain mid-tier supplier balance sheets — latest update,Financial,Global,NA,Medium,0.51
+2026-03-04,Rhine flood risk closures threaten BASF polymer supply,Climate,Germany,NA,Low,0.37
+2026-03-06,FAME III subsidies drive domestic EV demand surge — industry reaction,Policy,India,NA,Low,0.3
+2026-03-06,Mexican tier-1 harness supplier issues voluntary recall notice — analysts weigh in,Quality,Mexico,NA,Medium,0.54
+2026-03-06,German IG Metall strike threatens European auto parts output — latest update,Labour,Germany,NA,Low,0.35
+2026-03-06,Flooding disrupts Sulawesi nickel mining operations,Climate,Indonesia,NA,Medium,0.46
+2026-03-08,New EU EV mandate accelerates battery localisation in Europe — industry reaction,Policy,EU,NA,Medium,0.49
+2026-03-08,USD strengthening increases EM supplier invoice costs — analysts weigh in,Financial,Global,NA,Medium,0.55
+2026-03-08,Pune industrial belt labour shortage affects Tier-2 production — latest update,Labour,India,NA,Low,0.35
+2026-03-08,Bushfire risk near Pilbara lithium operations flagged,Climate,Australia,Lithium,Low,0.32
+2026-03-10,Chinese tier-2 supplier quality audit reveals systemic gaps — industry reaction,Quality,China,NA,Medium,0.63
+2026-03-10,Turkish lira volatility disrupts harness supplier payment terms — analysts weigh in,Financial,Turkey,NA,Medium,0.55
+2026-03-10,Nuevo Leon wage hike squeezes Mexican maquiladora margins — latest update,Labour,Mexico,NA,Medium,0.46
+2026-03-10,Monsoon delays disrupt Chennai plant inbound logistics,Climate,India,NA,Medium,0.52
+2026-03-12,IATF 16949 recertification improves Indian supplier defect rates — industry reaction,Quality,India,NA,Low,0.33
+2026-03-12,Brazilian real depreciation inflates South American component costs — analysts weigh in,Financial,Brazil,NA,Medium,0.62
+2026-03-12,Post-CNY worker shortage delays Chinese supplier restart — latest update,Labour,China,NA,Low,0.38
+2026-03-12,Typhoon season disrupts Shenzhen and Guangzhou supplier output,Climate,China,NA,Low,0.36
+2026-03-14,Connector defect spike traced to Vietnam supplier batch V2234 — industry reaction,Quality,Vietnam,NA,Low,0.44
+2026-03-14,RBI rate cut improves Indian supplier working capital position — analysts weigh in,Financial,India,NA,Low,0.25
+2026-03-14,Korean automotive union demands 15% wage increase for 2026 — latest update,Labour,South Korea,NA,Low,0.37
+2026-03-14,Euro 7 compliance timeline pressures European powertrain supply,Regulatory,EU,NA,Low,0.43
+2026-03-16,Welding process variation flagged across 3 EV battery plants — industry reaction,Quality,Global,NA,Low,0.41
+2026-03-16,Chinese supplier credit tightening raises payment default risk — analysts weigh in,Financial,China,NA,Medium,0.51
+2026-03-16,Extreme heat disrupts outdoor logistics across South Asia — latest update,Climate,Global,NA,Medium,0.5
+2026-03-16,CMVR homologation backlog delays new model launches,Regulatory,India,NA,Low,0.26
+2026-03-18,Korean chipmaker achieves 6-sigma quality milestone — industry reaction,Quality,South Korea,NA,Low,0.3
+2026-03-18,Rising interest rates strain mid-tier supplier balance sheets — analysts weigh in,Financial,Global,NA,Medium,0.5
+2026-03-18,Rhine flood risk closures threaten BASF polymer supply — latest update,Climate,Germany,NA,Low,0.3
+2026-03-18,UN R155 cybersecurity regulation impacts ECU supplier roadmaps,Regulatory,Global,NA,Medium,0.51
+2026-03-20,Mexican tier-1 harness supplier issues voluntary recall notice — industry reaction,Quality,Mexico,NA,Medium,0.53
+2026-03-20,German IG Metall strike threatens European auto parts output — analysts weigh in,Labour,Germany,NA,Medium,0.49
+2026-03-20,Flooding disrupts Sulawesi nickel mining operations — latest update,Climate,Indonesia,NA,Medium,0.49
+2026-03-20,NHTSA recall wave triggers ECU firmware re-qualification costs,Regulatory,USA,NA,Low,0.4
+2026-03-22,USD strengthening increases EM supplier invoice costs — industry reaction,Financial,Global,NA,Medium,0.45
+2026-03-22,Pune industrial belt labour shortage affects Tier-2 production — analysts weigh in,Labour,India,NA,Low,0.34
+2026-03-22,Bushfire risk near Pilbara lithium operations flagged — latest update,Climate,Australia,Lithium,Low,0.4
+2026-03-22,REACH chemical regulation tightens material approval for EV parts,Regulatory,EU,NA,Medium,0.48
+2026-03-24,Turkish lira volatility disrupts harness supplier payment terms — industry reaction,Financial,Turkey,NA,Medium,0.63
+2026-03-24,Nuevo Leon wage hike squeezes Mexican maquiladora margins — analysts weigh in,Labour,Mexico,NA,Low,0.42
+2026-03-24,Monsoon delays disrupt Chennai plant inbound logistics — latest update,Climate,India,NA,Low,0.4
+2026-03-24,BIS certification backlog delays electronic component imports,Regulatory,India,NA,Low,0.39
+2026-03-26,Brazilian real depreciation inflates South American component costs — industry reaction,Financial,Brazil,NA,Medium,0.62
+2026-03-26,Post-CNY worker shortage delays Chinese supplier restart — analysts weigh in,Labour,China,NA,Low,0.35
+2026-03-26,Typhoon season disrupts Shenzhen and Guangzhou supplier output — latest update,Climate,China,NA,Low,0.37
+2026-03-28,RBI rate cut improves Indian supplier working capital position — industry reaction,Financial,India,NA,Low,0.35
+2026-03-28,Korean automotive union demands 15% wage increase for 2026 — analysts weigh in,Labour,South Korea,NA,Low,0.33
+2026-03-28,Euro 7 compliance timeline pressures European powertrain supply — latest update,Regulatory,EU,NA,Medium,0.49
+2026-03-30,Chinese supplier credit tightening raises payment default risk — industry reaction,Financial,China,NA,Medium,0.58
+2026-03-30,Extreme heat disrupts outdoor logistics across South Asia — analysts weigh in,Climate,Global,NA,Medium,0.5
+2026-03-30,CMVR homologation backlog delays new model launches — latest update,Regulatory,India,NA,Low,0.39
+2026-04-01,Rising interest rates strain mid-tier supplier balance sheets — industry reaction,Financial,Global,NA,Low,0.36
+2026-04-01,Rhine flood risk closures threaten BASF polymer supply — analysts weigh in,Climate,Germany,NA,Low,0.4
+2026-04-01,UN R155 cybersecurity regulation impacts ECU supplier roadmaps — latest update,Regulatory,Global,NA,Medium,0.49
+2026-04-03,German IG Metall strike threatens European auto parts output — industry reaction,Labour,Germany,NA,Low,0.38
+2026-04-03,Flooding disrupts Sulawesi nickel mining operations — analysts weigh in,Climate,Indonesia,NA,Medium,0.48
+2026-04-03,NHTSA recall wave triggers ECU firmware re-qualification costs — latest update,Regulatory,USA,NA,Low,0.37
+2026-04-05,Pune industrial belt labour shortage affects Tier-2 production — industry reaction,Labour,India,NA,Low,0.41
+2026-04-05,Bushfire risk near Pilbara lithium operations flagged — analysts weigh in,Climate,Australia,Lithium,Low,0.43
+2026-04-05,REACH chemical regulation tightens material approval for EV parts — latest update,Regulatory,EU,NA,Medium,0.5
+2026-04-07,Nuevo Leon wage hike squeezes Mexican maquiladora margins — industry reaction,Labour,Mexico,NA,Low,0.41
+2026-04-07,Monsoon delays disrupt Chennai plant inbound logistics — analysts weigh in,Climate,India,NA,Medium,0.5
+2026-04-07,BIS certification backlog delays electronic component imports — latest update,Regulatory,India,NA,Low,0.41
+2026-04-09,Post-CNY worker shortage delays Chinese supplier restart — industry reaction,Labour,China,NA,Low,0.34
+2026-04-09,Typhoon season disrupts Shenzhen and Guangzhou supplier output — analysts weigh in,Climate,China,NA,Low,0.4
+2026-04-11,Korean automotive union demands 15% wage increase for 2026 — industry reaction,Labour,South Korea,NA,Low,0.36
+2026-04-11,Euro 7 compliance timeline pressures European powertrain supply — analysts weigh in,Regulatory,EU,NA,Medium,0.46
+2026-04-13,Extreme heat disrupts outdoor logistics across South Asia — industry reaction,Climate,Global,NA,Medium,0.49
+2026-04-13,CMVR homologation backlog delays new model launches — analysts weigh in,Regulatory,India,NA,Low,0.29
+2026-04-15,Rhine flood risk closures threaten BASF polymer supply — industry reaction,Climate,Germany,NA,Low,0.32
+2026-04-15,UN R155 cybersecurity regulation impacts ECU supplier roadmaps — analysts weigh in,Regulatory,Global,NA,Medium,0.49
+2026-04-17,Flooding disrupts Sulawesi nickel mining operations — industry reaction,Climate,Indonesia,NA,Medium,0.48
+2026-04-17,NHTSA recall wave triggers ECU firmware re-qualification costs — analysts weigh in,Regulatory,USA,NA,Low,0.39
+2026-04-19,Bushfire risk near Pilbara lithium operations flagged — industry reaction,Climate,Australia,Lithium,Low,0.33
+2026-04-19,REACH chemical regulation tightens material approval for EV parts — analysts weigh in,Regulatory,EU,NA,Low,0.42
+2026-04-21,Monsoon delays disrupt Chennai plant inbound logistics — industry reaction,Climate,India,NA,Medium,0.51
+2026-04-21,BIS certification backlog delays electronic component imports — analysts weigh in,Regulatory,India,NA,Low,0.28
+2026-04-23,Typhoon season disrupts Shenzhen and Guangzhou supplier output — industry reaction,Climate,China,NA,Low,0.41
+2026-04-25,Euro 7 compliance timeline pressures European powertrain supply — industry reaction,Regulatory,EU,NA,Low,0.4
+2026-04-27,CMVR homologation backlog delays new model launches — industry reaction,Regulatory,India,NA,Low,0.34
+2026-04-29,UN R155 cybersecurity regulation impacts ECU supplier roadmaps — industry reaction,Regulatory,Global,NA,Medium,0.59
+2026-05-01,NHTSA recall wave triggers ECU firmware re-qualification costs — industry reaction,Regulatory,USA,NA,Low,0.38
+2026-05-03,REACH chemical regulation tightens material approval for EV parts — industry reaction,Regulatory,EU,NA,Low,0.43
+2026-05-05,BIS certification backlog delays electronic component imports — industry reaction,Regulatory,India,NA,Low,0.34

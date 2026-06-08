@@ -33,9 +33,12 @@ coverage.xml
 .dmypy.json
 dmypy.json
 
+# Data generation / utility scripts (not for production)
+generate_data.py
+seed_data.py
+
 # ─── Node / Frontend ────────────────────────────────────────────────
 node_modules/
-dist/
 .pnp
 .pnp.js
 

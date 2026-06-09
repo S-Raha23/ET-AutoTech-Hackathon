@@ -23,13 +23,22 @@ It combines a multi-factor risk scoring engine with GPT-4o intelligence to turn 
 ![Supply Chain Twin](screenshots/supply_chain_twin.png)
 
 ### Risk Detail
-![Risk Detail](screenshots/risk_detail.png)
+![Risk Detail](screenshots/rish_detail.png)
+
+### AI Copilot
+![AI Copilot](screenshots/AI_Copilot.png)
+
+### Scenario Planner
+![Scenario Planner](screenshots/scenario_planner.png)
+
+### Sourcing Simulator
+![Sourcing Simulator](screenshots/sourcing_simulator.png)
 
 ### Quality Copilot
 ![Quality Copilot](screenshots/quality_copilot.png)
 
 ### ERP Reorder Simulator
-![ERP Simulator](screenshots/erp_simulator.png)
+![ERP Reorder](screenshots/ERP_Reorder.png)
 
 ---
 
